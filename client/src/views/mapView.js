@@ -4,6 +4,7 @@ var MapView = function(container, coords, zoom){
     center: coords,
     zoom: zoom
   })
+  this.markers = []
 
 }
 
@@ -14,6 +15,14 @@ MapView.prototype = {
       position: coords,
       map: this.googleMap
     })
+    this.markers.push(marker)
+  },
+
+  clearMarkers: function(){
+    this.markers.forEach(function(marker){
+      marker.setMap(null)
+    })
+    this.markers = []
   }
 
 }
