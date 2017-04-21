@@ -9,17 +9,31 @@ var app = function(){
 
   var mapView = new MapView(mapContainer, center, zoom)
 
+
   var explorersList = new ExplorersList("http://localhost:3000/api/explorers")
+  
   explorersList.makeRequest(function(explorers){
 
     explorers.forEach(function(explorer){
-      var name = document.createElement('li')
-      name.innerText = explorer.name
+
+      var explorerToShow = explorer
+
+      var button = document.createElement('button')
+      button.innerHTML = explorer.name
+      
       var ul = document.querySelector('ul')
-      ul.appendChild(name)
+      ul.appendChild(button)
+      
+      button.addEventListener('click', function(){
+        mapView.addMarker(explorerToShow.endcoord)
+      })
+
     })
     
   })
+
+
+
 }
 
 window.onload = app
