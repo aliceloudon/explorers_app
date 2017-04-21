@@ -2,7 +2,7 @@ use explorers
 
 db.discoveries.insert([
   {
-    date: 1492, 
+    date: "1492", 
     title: "Columbus Discovers America", 
     name: "Christopher Columbus",
     nationality: "Italian",
@@ -12,12 +12,12 @@ db.discoveries.insert([
     image: "http://assets0.ordienetworks.com/misc/Screen%20Shot%202013-10-11%20at%209.22.15%20AM.png" 
   },
   {
-    date: 1914, 
+    date: "1914", 
     title: "Almost made it to the South Pole", 
     name: "Sir Ernest Shackleton",
-    nationality: "Anglo-Irish"
-    startcoord: {lat: , lng: -},
-    endcoord: {lat: , lng: -}, 
+    nationality: "Anglo-Irish",
+    startcoord: {lat: 21.1515, lng: -23.634},
+    endcoord: {lat: 51.235, lng: -12.62}, 
     info: "Shackleton was an Antarctic explorer, best known for leading the 'Endurance' expedition of 1914-16. In 1914, Shackleton made his third trip to the Antarctic with the ship 'Endurance', planning to cross Antarctica via the South Pole. Early in 1915, 'Endurance' became trapped in the ice, and ten months later sank. Shackleton's crew had already abandoned the ship to live on the floating ice. In April 1916, they set off in three small boats, eventually reaching Elephant Island. Taking five crew members, Shackleton went to find help. In a small boat, the six men spent 16 days crossing 1,300 km of ocean to reach South Georgia and then trekked across the island to a whaling station. The remaining men from the 'Endurance' were rescued in August 1916. Not one member of the expedition died.", 
     image: "https://www.biography.com/.image/t_share/MTE1ODA0OTcxNzgzMDYzMDUz/sir-ernest-henry-shackleton-9480091-1-raw.jpg" 
   },
@@ -25,7 +25,7 @@ db.discoveries.insert([
     date: 1911, 
     title: "The first expedition to reach the South Pole", 
     name: "Roald Amundsen",
-    nationality: "Norwegian"
+    nationality: "Norwegian",
     startcoord: {lat: 59.9139, lng: 10.7522},
     endcoord: {lat: -90, lng: 0}, 
     info: "Roald Amundsen was the first man to lead a successful expedition to the South Pole, famously arriving about a month before Scott and his party that set out at around the same time. Amundsen used dog sleds, his party was well organised and well prepared with the primary intention of reaching the pole, rather than other exploration or scientific discovery. He was the first person to visit both the North and the South poles.",
@@ -41,7 +41,7 @@ db.discoveries.insert([
     image: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Amelia_Earhart_1935.jpg"
   },
   {
-    date: September 20th 1519,
+    date: "September 20th 1519",
       title: "Sailing around the world",
       name: "Ferdinand Magellan",
       startcoord: {lat: -6.314993, lng: 143.955550},
