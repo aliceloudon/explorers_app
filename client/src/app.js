@@ -26,7 +26,7 @@ var app = function(){
       
       button.addEventListener('click', function(){
         mapView.clearMarkers()
-        mapView.addMarker(explorerToShow.endcoord)
+        mapView.addMarkers(explorerToShow)
       })
 
     })

@@ -10,12 +10,31 @@ var MapView = function(container, coords, zoom){
 
 MapView.prototype = {
 
-  addMarker: function(coords){
-    var marker = new google.maps.Marker({
-      position: coords,
+  addMarkers: function(explorer){
+    console.log(explorer)
+    console.log(explorer.endcoord)
+    var startMarker = new google.maps.Marker({
+      position: explorer.startcoord,
       map: this.googleMap
     })
-    this.markers.push(marker)
+    this.markers.push(startMarker)
+
+    var endMarker = new google.maps.Marker({
+      position: explorer.endcoord,
+      map: this.googleMap
+    })
+    this.markers.push(endMarker)
+
+    var contentString = "<h3>" + explorer.title + "</h3>" + "<p>" + explorer.info + "</p>"
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    infowindow.open(this.googleMap, endMarker);
+
+    this.googleMap.setZoom(5)
+    this.googleMap.setCenter(explorer.endcoord)
   },
 
   clearMarkers: function(){
