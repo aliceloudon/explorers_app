@@ -5,7 +5,7 @@ var app = function(){
 
   var mapContainer = document.querySelector('#map')
   var center = {lat:0, lng:0}
-  var zoom = 1
+  var zoom = 2
 
   var mapView = new MapView(mapContainer, center, zoom)
 
