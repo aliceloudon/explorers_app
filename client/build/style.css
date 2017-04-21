@@ -7,6 +7,14 @@ body, html {
   width: 100%;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #flex-container {
   display: flex;
   flex-direction: row;
@@ -26,5 +34,49 @@ body, html {
   width: 25%;
   height: 100%;
   border: 1px solid #000;
+  background: #456990
+}
+
+#timeline ul li { /* the line */
+  list-style-type: none;
+  position: relative;
+  right:40%;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+ 
+#timeline ul li::after { /* the circles */
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+#timeline ul li div { /* the text boxes */
+  position: relative;
+  bottom: 0;
+  padding: 15px;
+  background: #F45B69;
+  left:30px;
+  width: 200px;
+}
+
+#timeline ul li div::before { /* the < connecting the box and the circle */
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
 }
 
