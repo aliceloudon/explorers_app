@@ -21,13 +21,13 @@ var app = function(){
     //   button.innerHTML = explorer.name
     //   var ul = document.querySelector('ul')
     //   ul.appendChild(button)
-    //   button.addEventListener('click', function(){
-    //     mapView.clearMarkers()
-    //     mapView.addMarkers(explorerToShow)
-    //   })
+      // button.addEventListener('click', function(){
+      //   mapView.clearMarkers()
+      //   mapView.addMarkers(explorerToShow)
+      // })
     // })
   
-    timelineView.render(explorers)
+    timelineView.render(explorers, mapView)
 
 
   })

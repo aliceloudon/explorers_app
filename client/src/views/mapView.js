@@ -43,8 +43,6 @@ var MapView = function(container, coords, zoom){
 MapView.prototype = {
 
   addMarkers: function(explorer){
-    console.log(explorer)
-    console.log(explorer.endcoord)
     var startMarker = new google.maps.Marker({
       position: explorer.startcoord,
       map: this.googleMap
@@ -63,9 +61,13 @@ MapView.prototype = {
       content: contentString
     });
 
-    infowindow.open(this.googleMap, endMarker);
+    infowindow.open(this.googleMap, endMarker)
 
-    this.googleMap.setZoom(5)
+    endMarker.addListener('click', function(){
+      infowindow.open(this.googleMap, endMarker)  
+    }.bind(this))
+
+    this.googleMap.setZoom(3)
     this.googleMap.setCenter(explorer.endcoord)
   },
 
