@@ -1,4 +1,5 @@
 var ExplorersList = require("./models/explorersList")
+var MapView = require("./views/mapView")
 
 var app = function(){
   var explorersList = new ExplorersList("http://localhost:3000/api/explorers")
