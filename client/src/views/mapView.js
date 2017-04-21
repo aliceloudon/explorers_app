@@ -21,6 +21,7 @@ var MapView = function(container, coords, zoom){
     {
         "featureType": "road",
         "stylers": [
+            {"visibility": "off"},
             {"color": "#813033"},
             {"lightness": 43}
         ]
