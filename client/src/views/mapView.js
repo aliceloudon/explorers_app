@@ -2,7 +2,39 @@ var MapView = function(container, coords, zoom){
 
   this.googleMap = new google.maps.Map(container, {
     center: coords,
-    zoom: zoom
+    zoom: zoom,
+    styles: [
+    {
+        "elementType": "labels",
+        "stylers": [
+            {"visibility": "on"},
+            // {"color": "#f49f53"}
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "stylers": [
+            {"color": "#f9ddc5"},
+            {"lightness": -7}
+        ]
+    },
+    {
+        "featureType": "road",
+        "stylers": [
+            {"color": "#813033"},
+            {"lightness": 43}
+        ]
+    },
+    {
+        "featureType": "water",
+        "stylers": [
+            {"color": "#1994bf"},
+            {"saturation": -69},
+            {"gamma": 0.99},
+            {"lightness": 43}
+        ]
+    }
+]
   })
   this.markers = []
 
