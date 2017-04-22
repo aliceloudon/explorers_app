@@ -25,11 +25,31 @@ db.discoveries.insert([
       date: "1519",
       title: "Sailing around the world",
       name: "Ferdinand Magellan",
-      nationality: "Portugese"
+      nationality: "Portugese",
       startcoord: {lat: -6.314993, lng: 143.955550},
       endcoord: {lat: -4.677919, lng: -174.519597},
       info: "On September 20, 1519 <b>Ferdinand Magellan</b> and 237 crew members set sail on five ships from Sanlucar de Barrameda in the hopes of finding a shortcut to the Spice Islands. After three long months of sailing the Atlantic, Magellan and his crew anchored near Rio de Janeiro in the present day South American nation of Brazil. /n As the ships neared the southern tip of South America, one smashed into the beach and lost all supplies. Nevertheless, in October of 1520, Magellan and his crew crossed the treacherous straits at the tip of South America, which became known as the Straits of Magellan. /n Soon, the crew sailed to the Philippine Islands, where they converted natives to Christianity. During an attempt to convert the native chief, Mactan, to Christianity, Magellan was wounded by an arrow that was driven through his foot by a native warrior. Mactan, who had become upset with Magellan’s insistence that he convert, ordered his warriors to attack. They killed Magellan on April 27, 1521. Most of Magellan’s crew escaped and set sail./n With the loss of their leader, Juan Sebastian Del Cano took control of the ship and sailed for Spain. The <i>Victoria</i> made it back to Spain with only 18 men surviving, hence completing the first circumnavigation of the world.",
       image: "https://en.wikipedia.org/wiki/Ferdinand_Magellan#/media/File:Ferdinand_Magellan.jpg"
+  },
+  {
+      date: "1766",
+      title: "First woman to circumnavigate the world",
+      name: "Jeanne Baret",
+      nationality: "French",
+      startcoord: {lat: 45.943067, lng: -0.956036},
+      endcoord: {lat: -35.017063, lng: -56.030273},
+      info: "Born in 1740 in France’s Loire Valley, <b>Jeanne Baret</b> overcame her poverty-stricken childhood to circumnavigate the globe before any other woman in recorded history and play a key role in identifying hundreds of plant species. In the early 1760s she became the lover and assistant of the well-known botanist Philibert Commerson, possibly using her familiarity with medicinal plants to contribute to his research. A few years later, the celebrated explorer Louis Antoine de Bougainville invited Commerson to join a team of experts who would sail around the world in a grand show of France’s scientific preeminence. /n Who would help Commerson with his fieldwork during the long journey? While Baret was the obvious choice, a royal ordinance in force at the time forbade women from traveling on French Navy vessels. To get around the problem, the couple hatched an elaborate plot in which Baret dressed as a man and showed up on the dock to offer her services—introducing herself as “Jean”—just before Bougainville’s ship, the Etoile, set sail in December 1766. As the expedition made its way toward South America, Baret spent much of her time evading the crew and caring for the sickly Commerson. Arriving in Uruguay in February 1767, the pair began setting out on botanizing missions, amassing more than 6,000 specimens in two years.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Jeanne_Barret.jpg"
+  },
+  {
+      date: "1855",
+      title: "Discovering Victoria Falls",
+      name: "David Livingstone",
+      nationality: "Scottish",
+      startcoord: {lat: -17.819342, lng: 23.953647},
+      endcoord: {lat: -17.924353, lng: 25.855894},
+      info: "In 1852, <b>David Livingstone</b> began a four year expedition to find a route from the upper Zambezi to the coast. This filled huge gaps in western knowledge of central and southern Africa. In 1855, Livingstone discovered a spectacular waterfall which he named 'Victoria Falls'. He reached the mouth of the Zambezi on the Indian Ocean in May 1856, becoming the first European to cross the width of southern Africa.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/2/21/David_Livingstone_-1.jpg"
   },
   {
     date: "1911", 
@@ -82,6 +102,8 @@ db.discoveries.insert([
     image: "http://www.suzimcalpine.com/wp-content/uploads/2013/05/sir-edmund-hillary.jpg" 
   }
 
+  ])
+
 
 // POSSIBLE VIDEO LINK FOR INFOWINDOW
   // //  content: '<video controls="" style="width:100px;height:100px;" poster="poster.png">' +
@@ -92,10 +114,12 @@ db.discoveries.insert([
   // KUPE: https://www.youtube.com/watch?v=tuJk_a4iWj0
   // COLOMBUS: https://www.youtube.com/watch?v=3fvXZzcrEcc
   // MAGELLAN: https://www.youtube.com/watch?v=Y94s85-Crew
+  // BARET: https://www.youtube.com/watch?v=54l_ESqVoHU
+  // LIVINGSTONE: https://www.youtube.com/watch?v=f9ivr8CfEoE
   // AMUNDSEN: https://www.youtube.com/watch?v=m0Xp3X9NJ9w
   // SHACKLETON: https://www.youtube.com/watch?v=8r5jtV4vNRM
   // FAWCETT: https://www.youtube.com/watch?v=x3I1vqr-CfA
   // EARHART: https://www.youtube.com/watch?v=ivbh9vEkp1g
   // HILLARY: https://www.youtube.com/watch?v=mPB5ZERTdTI
  
-])
+
