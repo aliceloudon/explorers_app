@@ -14,7 +14,7 @@ var MapView = function(container, coords, zoom){
     {
         "featureType": "landscape",
         "stylers": [
-            {"color": "#f9ddc5"},
+            {"color": "#DABD98"},
             {"lightness": -7}
         ]
     },
@@ -29,7 +29,7 @@ var MapView = function(container, coords, zoom){
     {
         "featureType": "water",
         "stylers": [
-            {"color": "#1994bf"},
+            {"color": "#BFC8CE"},
             {"saturation": -69},
             {"gamma": 0.99},
             {"lightness": 43}
@@ -76,14 +76,25 @@ MapView.prototype = {
       infowindow.open(this.googleMap, endMarker)  
     }.bind(this))
 
+    var lineSymbol = {
+      path: 'M 0,-1 0,1',
+      strokeOpacity: 1,
+      strokeWeight: 2,
+      scale: 4,
+    }
+
     var line = new google.maps.Polyline({
         path: [
             new google.maps.LatLng(explorer.startcoord.lat, explorer.startcoord.lng), 
             new google.maps.LatLng(explorer.endcoord.lat, explorer.endcoord.lng)
         ],
         strokeColor: "#FF0000",
-        strokeOpacity: 1.0,
-        strokeWeight: 1,
+        strokeOpacity: 0,
+        icons: [{
+            icon: lineSymbol,
+            offset: '0',
+            repeat: '20px'
+          }],
         geodesic: true,
         map: this.googleMap
     })
