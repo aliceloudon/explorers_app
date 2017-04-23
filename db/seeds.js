@@ -33,7 +33,7 @@ db.discoveries.insert([
       endcoord: {lat: -4.677919, lng: -174.519597},
       info: "<p>On September 20, 1519 <b>Ferdinand Magellan</b> and 237 crew members set sail on five ships from Sanlucar de Barrameda in the hopes of finding a shortcut to the Spice Islands. After three long months of sailing the Atlantic, Magellan and his crew anchored near Rio de Janeiro in the present day South American nation of Brazil. </p><p>As the ships neared the southern tip of South America, one smashed into the beach and lost all supplies. Nevertheless, in October of 1520, Magellan and his crew crossed the treacherous straits at the tip of South America, which became known as the Straits of Magellan.</p><p>Soon, the crew sailed to the Philippine Islands, where they converted natives to Christianity. During an attempt to convert the native chief, Mactan, to Christianity, Magellan was wounded by an arrow that was driven through his foot by a native warrior. Mactan, who had become upset with Magellan’s insistence that he convert, ordered his warriors to attack. They killed Magellan on April 27, 1521. Most of Magellan’s crew escaped and set sail.</p><p>With the loss of their leader, Juan Sebastian Del Cano took control of the ship and sailed for Spain. The <i>Victoria</i> made it back to Spain with only 18 men surviving, hence completing the first circumnavigation of the world.</p>",
       image: "http://cdn.history.com/sites/2/2013/11/142084686-AB.jpeg",
-      url: "https://www.youtube.com/embed/Y94s85-Crew"
+      url: 'https://www.youtube.com/embed/Y94s85-Crew'
   },
   {
       date: "1766",
