@@ -58,7 +58,7 @@ db.discoveries.insert([
     name: "Roald Amundsen",
     nationality: "Norwegian",
     startcoord: {lat: 59.9139, lng: 10.7522},
-    endcoord: {lat: -90, lng: 0}, 
+    endcoord: {lat: -90, lng: 0.5}, 
     info: "<b>Roald Amundsen</b> was the first man to lead a successful expedition to the South Pole, famously arriving about a month before Scott and his party that set out at around the same time. Amundsen used dog sleds, his party was well organised and well prepared with the primary intention of reaching the pole, rather than other exploration or scientific discovery. He was the first person to visit both the North and the South poles.",
     image: "http://photos.state.gov/libraries/newzealand/8558/ice2012/Roald-Amundsen_1767131b.jpg" 
   },
