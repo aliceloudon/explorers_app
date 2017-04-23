@@ -34,10 +34,18 @@ var MapView = function(container, coords, zoom){
             {"gamma": 0.99},
             {"lightness": 43}
         ]
+    },
+    {
+      "featureType": "administrative",
+      "elementType": "geometry",
+      "stylers": [
+        { "visibility": "off" }
+      ]
     }
 ]
   })
   this.markers = []
+  this.lines = []
 
 }
 
@@ -68,6 +76,19 @@ MapView.prototype = {
       infowindow.open(this.googleMap, endMarker)  
     }.bind(this))
 
+    var line = new google.maps.Polyline({
+        path: [
+            new google.maps.LatLng(explorer.startcoord.lat, explorer.startcoord.lng), 
+            new google.maps.LatLng(explorer.endcoord.lat, explorer.endcoord.lng)
+        ],
+        strokeColor: "#FF0000",
+        strokeOpacity: 1.0,
+        strokeWeight: 1,
+        geodesic: true,
+        map: this.googleMap
+    })
+    this.lines.push(line)
+
     this.googleMap.setZoom(3)
     this.googleMap.setCenter(explorer.endcoord)
   },
@@ -77,6 +98,13 @@ MapView.prototype = {
       marker.setMap(null)
     })
     this.markers = []
+  },
+
+  clearLines: function(){
+    this.lines.forEach(function(line){
+      line.setMap(null)
+    })
+    this.lines = []
   }
 
 }
