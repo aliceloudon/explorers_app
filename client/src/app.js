@@ -14,23 +14,14 @@ var app = function(){
   
 
   explorersList.makeRequest(function(explorers){
-
-    // explorers.forEach(function(explorer){
-    //   var explorerToShow = explorer
-    //   var button = document.createElement('button')
-    //   button.innerHTML = explorer.name
-    //   var ul = document.querySelector('ul')
-    //   ul.appendChild(button)
-      // button.addEventListener('click', function(){
-      //   mapView.clearMarkers()
-      //   mapView.addMarkers(explorerToShow)
-      // })
-    // })
   
     timelineView.render(explorers, mapView)
 
-
   })
+
+  var quiz = document.getElementById("quiz")
+  var quizButton = document.getElementById("quiz-button")
+  var span = document.getElementsById("close")
 
 
 
