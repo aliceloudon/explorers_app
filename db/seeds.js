@@ -17,7 +17,7 @@ db.discoveries.insert([
     title: "Columbus Discovers America", 
     name: "Christopher Columbus",
     nationality: "Italian",
-    startcoord: {lat: 41.680588, lng: -87.835328},
+    startcoord: {lat: 37.233333, lng: -6.9},
     endcoord: {lat: 13.692940, lng: -89.218191}, 
     info: "<p>On August 3, 1492, <b>Christopher Columbus</b>, crew, and three ships, the <i>Nina, Pinta</i>, and <i>Santa Maria</i>, left Palos, Spain and headed westward.</p><p>After stopping in the Canary Islands off the coast of Africa, Columbus’ ships hit the open seas. Covering about 150 miles a day, the trip was long and arduous. The crew was afraid of sea monsters and grew more restless every day that land was not sighted. Columbus offered a reward for the first person to sight land. On October 12, a crew member aboard the <i>Pinta</i> sighted one of the Bahama Islands. Columbus set foot on what he believed was one of the Spice Islands, a group of islands in Asia (now known as Indonesia), where valuable spices and riches came from. He named the land San Salvador. Columbus failed to find the riches he expected, and continued to search for China. He next visited Cuba and Hispaniola (Dominican Republic). He encountered native peoples who he named “Indians” because he believed they were inhabitants of the Indies.</p>", 
     image: "http://assets0.ordienetworks.com/misc/Screen%20Shot%202013-10-11%20at%209.22.15%20AM.png" 
@@ -58,7 +58,7 @@ db.discoveries.insert([
     name: "Roald Amundsen",
     nationality: "Norwegian",
     startcoord: {lat: 59.9139, lng: 10.7522},
-    endcoord: {lat: -90, lng: 0.5}, 
+    endcoord: {lat: -85, lng: 5},
     info: "<b>Roald Amundsen</b> was the first man to lead a successful expedition to the South Pole, famously arriving about a month before Scott and his party that set out at around the same time. Amundsen used dog sleds, his party was well organised and well prepared with the primary intention of reaching the pole, rather than other exploration or scientific discovery. He was the first person to visit both the North and the South poles.",
     image: "http://photos.state.gov/libraries/newzealand/8558/ice2012/Roald-Amundsen_1767131b.jpg" 
   },
@@ -67,14 +67,14 @@ db.discoveries.insert([
     title: "Almost made it to the South Pole", 
     name: "Sir Ernest Shackleton",
     nationality: "Anglo-Irish",
-    startcoord: {lat: 21.1515, lng: -23.634},
-    endcoord: {lat: 51.235, lng: -12.62}, 
+    startcoord: {lat: 50.371389, lng: 50.371389},
+    endcoord: {lat: -54.25, lng: -36.75}, 
     info: "<p><b>Sir Ernest Shackleton</b> was an Antarctic explorer, best known for leading the <i>'Endurance'</i> expedition of 1914-16. In 1914, Shackleton made his third trip to the Antarctic with the ship <i>'Endurance'</i> , planning to cross Antarctica via the South Pole. Early in 1915, <i>'Endurance'</i> became trapped in the ice, and ten months later sank. Shackleton's crew had already abandoned the ship to live on the floating ice.</p> <p>In April 1916, they set off in three small boats, eventually reaching Elephant Island. Taking five crew members, Shackleton went to find help. In a small boat, the six men spent 16 days crossing 1,300 km of ocean to reach South Georgia and then trekked across the island to a whaling station. The remaining men from the <i>'Endurance'</i> were rescued in August 1916. Not one member of the expedition died.</p>", 
     image: "https://www.biography.com/.image/t_share/MTE1ODA0OTcxNzgzMDYzMDUz/sir-ernest-henry-shackleton-9480091-1-raw.jpg" 
   },
   {
     date: "1925", 
-    title: "Expedition to the Lost City of Z", 
+    title: "Expedition to the Lost City of 'Z'", 
     name: "Sir Percy Fawcett",
     nationality: "English",
     startcoord: {lat: -15.601411, lng: -56.097892},
@@ -97,8 +97,8 @@ db.discoveries.insert([
     title: "First Ascent of Mount Everest", 
     name: "Edmund Hillary",
     nationality: "New Zealand",
-    startcoord: {lat: 41.680588, lng: -87.835328},
-    endcoord: {lat: 13.692940, lng: -89.218191}, 
+    startcoord: {lat: 28.0026, lng: 86.8528},
+    endcoord: {lat: 27.988056, lng: 86.925278}, 
     info: "<p>New Zealander <b>Edmund Hillary</b> and fellow mountaineer Tenzing Norgay were the first known and confirmed climbers ever to make it to the peak of Mount Everest in 1953.</p><p>Other notable feats that Hillary accomplished in addition to his Mount Everest adventure is that he also reached both the North and South Pole, which made him the first man to ever reach all three landmarks. During World War II, Hillary was part of the New Zealand Air Force working as a navigator.<p>", 
     image: "http://www.suzimcalpine.com/wp-content/uploads/2013/05/sir-edmund-hillary.jpg" 
   }
