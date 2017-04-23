@@ -12,7 +12,7 @@ explorersRouter.get("/explorers", function(req,res){
 
 explorersRouter.get("/quiz", function(req,res){
   explorersQuery.allQuestions(function(docs){
-    res.json({question: "who climbed everest?"})
+    res.json(docs)
   })
 })
 
