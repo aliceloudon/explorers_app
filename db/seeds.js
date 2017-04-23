@@ -102,7 +102,19 @@ db.discoveries.insert([
     info: "<p>New Zealander <b>Edmund Hillary</b> and fellow mountaineer Tenzing Norgay were the first known and confirmed climbers ever to make it to the peak of Mount Everest in 1953.</p><p>Other notable feats that Hillary accomplished in addition to his Mount Everest adventure is that he also reached both the North and South Pole, which made him the first man to ever reach all three landmarks. During World War II, Hillary was part of the New Zealand Air Force working as a navigator.<p>", 
     image: "http://www.suzimcalpine.com/wp-content/uploads/2013/05/sir-edmund-hillary.jpg" 
   }
-  ])
+])
+
+db.questions.insert([
+  {
+    question: "Who was the first person to climb Mount Everest?",
+    answers: [
+      {text: "Edumnd Hillary", correct: true},
+      {text: "Ernest Shakleton", correct: false},
+      {text: "Roald Amundsen", correct: false},
+      {text: "David Livingstone", correct: false}
+    ]
+  }
+])
 
 // POSSIBLE VIDEO LINK FOR INFOWINDOW
   // //  content: '<video controls="" style="width:100px;height:100px;" poster="poster.png">' +
