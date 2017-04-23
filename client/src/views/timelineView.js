@@ -6,6 +6,7 @@ TimelineView.prototype = {
 
   render: function(explorers, mapView){
     explorers.forEach(function(explorer){
+      var itemContainer = document.createElement('div')
       var li = document.createElement('li')
       var div = document.createElement('div')
       div.innerText = explorer.date + '\n' + explorer.title
