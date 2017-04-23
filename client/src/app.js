@@ -1,6 +1,7 @@
 var ExplorersList = require("./models/explorersList")
 var MapView = require("./views/mapView")
 var TimelineView = require("./views/timelineView")
+var QuizQuestions = require("./models/quizQuestions")
 
 var app = function(){
 
@@ -14,17 +15,20 @@ var app = function(){
   
 
   explorersList.makeRequest(function(explorers){
-  
     timelineView.render(explorers, mapView)
-
   })
+
+  var quizQuestions = new QuizQuestions("http://localhost:3000/api/quiz")
 
   var quiz = document.getElementById("quiz")
   var quizButton = document.getElementById("quiz-button")
-  var span = document.getElementsById("close")
+  var span = document.getElementById("close")
 
-
-
+  quizQuestions.makeRequest(function(questions){
+    quizButton.addEventListener('click', function(){
+      console.log(questions)
+    })
+  })
 
 }
 

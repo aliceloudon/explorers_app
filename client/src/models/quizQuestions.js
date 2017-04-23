@@ -1,9 +1,9 @@
-var Quiz = function(url){
+var QuizQuestions = function(url){
   this.url = url
   this.questions = []
 }
 
-Quiz.prototype = {
+QuizQuestions.prototype = {
   makeRequest: function(callback){
     var request = new XMLHttpRequest()
     request.open("GET", this.url)
@@ -18,4 +18,4 @@ Quiz.prototype = {
   }
 }
 
-module.exports = Quiz
+module.exports = QuizQuestions
