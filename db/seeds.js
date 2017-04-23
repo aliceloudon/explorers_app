@@ -1,4 +1,5 @@
 use explorers
+db.dropDatabase()
 
 db.discoveries.insert([
   {
@@ -73,11 +74,11 @@ db.discoveries.insert([
   },
   {
     date: "1925", 
-    title: "Expedition to the Lost City of 'Z'", 
+    title: "Expedition to the Lost City of Z", 
     name: "Sir Percy Fawcett",
     nationality: "English",
     startcoord: {lat: -15.601411, lng: -56.097892},
-    endcoord: {lat: -20.841567, lng: -44.159546.235}, 
+    endcoord: {lat: -20.841567, lng: -44.159546}, 
     info: "<b>Lieutenant Colonel Percy Fawcett</b> was a British geographer, artillery officer, cartographer, archaeologist and explorer of South America. Along with his eldest son, Jack, Fawcett disappeared in 1925 during an expedition to find 'Z' – his name for an ancient lost city, which he and others believed to exist and to be the remains of El Dorado, in the jungles of Brazil. /n On 20 April 1925 his final expedition departed from Cuiabá. In addition to his two principal companions, Fawcett was accompanied by two Brazilian labourers, two horses, eight mules, and a pair of dogs. The last communication from the expedition was on 29 May 1925 when Fawcett wrote, in a letter to his wife delivered by a native runner, that he was ready to go into unexplored territory with only Jack and his longtime friend Raleigh Rimell. They were last reported to be crossing the Upper Xingu, a southeastern tributary river of the River Amazon.", 
     image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/PercyFawcett.jpg" 
   },
@@ -101,9 +102,7 @@ db.discoveries.insert([
     info: "New Zealander <b>Edmund Hillary</b> and fellow mountaineer Tenzing Norgay were the first known and confirmed climbers ever to make it to the peak of Mount Everest in 1953. /n Other notable feats that Hillary accomplished in addition to his Mount Everest adventure is that he also reached both the North and South Pole, which made him the first man to ever reach all three landmarks. During World War II, Hillary was part of the New Zealand Air Force working as a navigator.", 
     image: "http://www.suzimcalpine.com/wp-content/uploads/2013/05/sir-edmund-hillary.jpg" 
   }
-
   ])
-
 
 // POSSIBLE VIDEO LINK FOR INFOWINDOW
   // //  content: '<video controls="" style="width:100px;height:100px;" poster="poster.png">' +
