@@ -14,7 +14,7 @@ var MapView = function(container, coords, zoom){
     {
         "featureType": "landscape",
         "stylers": [
-            {"color": "#f9ddc5"},
+            {"color": "#DABD98"},
             {"lightness": -7}
         ]
     },
@@ -29,7 +29,7 @@ var MapView = function(container, coords, zoom){
     {
         "featureType": "water",
         "stylers": [
-            {"color": "#1994bf"},
+            {"color": "#BFC8CE"},
             {"saturation": -69},
             {"gamma": 0.99},
             {"lightness": 43}
