@@ -14,6 +14,7 @@ TimelineView.prototype = {
       this.timelineList.appendChild(li)
       li.addEventListener('click', function(){
         mapView.clearMarkers()
+        mapView.clearLines()
         mapView.addMarkers(explorer)
       })
     }.bind(this))
