@@ -34,6 +34,13 @@ var MapView = function(container, coords, zoom){
             {"gamma": 0.99},
             {"lightness": 43}
         ]
+    },
+    {
+      "featureType": "administrative",
+      "elementType": "geometry",
+      "stylers": [
+        { "visibility": "off" }
+      ]
     }
 ]
   })
