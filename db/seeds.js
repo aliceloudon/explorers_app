@@ -17,7 +17,7 @@ db.discoveries.insert([
     title: "Columbus Discovers America", 
     name: "Christopher Columbus",
     nationality: "Italian",
-    startcoord: {lat: 41.680588, lng: -87.835328},
+    startcoord: {lat: 37.233333, lng: -6.9},
     endcoord: {lat: 13.692940, lng: -89.218191}, 
     info: "On August 3, 1492, <b>Christopher Columbus</b>, crew, and three ships, the <i>Nina, Pinta</i>, and <i>Santa Maria</i>, left Palos, Spain and headed westward./n After stopping in the Canary Islands off the coast of Africa, Columbus’ ships hit the open seas. Covering about 150 miles a day, the trip was long and arduous. The crew was afraid of sea monsters and grew more restless every day that land was not sighted. Columbus offered a reward for the first person to sight land. On October 12, a crew member aboard the <i>Pinta</i> sighted one of the Bahama Islands. Columbus set foot on what he believed was one of the Spice Islands, a group of islands in Asia (now known as Indonesia), where valuable spices and riches came from. He named the land San Salvador. Columbus failed to find the riches he expected, and continued to search for China. He next visited Cuba and Hispaniola (Dominican Republic). He encountered native peoples who he named “Indians” because he believed they were inhabitants of the Indies.", 
     image: "http://assets0.ordienetworks.com/misc/Screen%20Shot%202013-10-11%20at%209.22.15%20AM.png" 
