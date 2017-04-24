@@ -16,27 +16,9 @@ var app = function(){
   var videoView = new VideoView(document.querySelector('#video'))
   var textInfoView = new TextInfoView(document.querySelector('#info-box'))
 
-  explorersList.makeRequest(function(explorers){
-
-    // explorers.forEach(function(explorer){
-    //   var explorerToShow = explorer
-    //   var button = document.createElement('button')
-    //   button.innerHTML = explorer.name
-    //   var ul = document.querySelector('ul')
-    //   ul.appendChild(button)
-      // button.addEventListener('click', function(){
-      //   mapView.clearMarkers()
-      //   mapView.addMarkers(explorerToShow)
-      // })
-    // })
-  
+  explorersList.makeRequest(function(explorers){  
     timelineView.render(explorers, mapView, videoView, textInfoView)
-
-
   })
-
-
-
 
 }
 
