@@ -80,7 +80,7 @@ body, html {
 }
 
 #timeline ul li:hover {
-  color: red;
+  color: #333333;
 }
 
 #timeline ul li div { /* the text boxes */
