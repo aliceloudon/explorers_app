@@ -99,4 +99,9 @@ describe("Quiz", function(){
     assert.strictEqual(0, quiz.score)
   })
 
+  it("increases score on true", function(){
+    quiz.checkAnswer("true")
+    assert.strictEqual(1, quiz.score)
+  })
+
 })
