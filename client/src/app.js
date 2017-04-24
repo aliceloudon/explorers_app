@@ -3,6 +3,7 @@ var MapView = require("./views/mapView")
 var QuizView = require("./views/quizView")
 var TimelineView = require("./views/timelineView")
 var Quiz = require("./models/quiz")
+var VideoView = require("./views/videoView")
 
 var app = function(){
 
@@ -13,11 +14,12 @@ var app = function(){
   var mapView = new MapView(mapContainer, center, zoom)
   var explorersList = new ExplorersList("http://localhost:3000/api/explorers")
   var timelineView = new TimelineView(document.querySelector('#timeline-list'))
+  var videoView = new VideoView(document.querySelector('#video'))
   
 
   explorersList.makeRequest(function(explorers){
-    timelineView.render(explorers, mapView)
-  })
+  
+  timelineView.render(explorers, mapView, videoView)
 
   var quiz = new Quiz("http://localhost:3000/api/quiz")
   var quizWindow = document.getElementById("quiz-window")

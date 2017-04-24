@@ -1,12 +1,31 @@
-body {
-  margin: 0;
+
+#bbc-navbar {
+  width: 100%;
 }
+
+#launch-image {
+  width: 100%;
+  /*background-image: url("launch-image.")*/
+  height: 100%;
+  background-color: #FECD07;
+}
+
+h1 {
+    text-align: center;
+    font-family: tahoma;
+    color: grey;
+}
+
+
+/*body {
+  margin-right: 15%;
+}*/
 
 body, html {
   height: 100%;
   width: 100%;
-  background-image: url("timeline_background.jpg");
-  background-size: cover;
+  /*background-image: url("timeline_background.jpg");*/
+  /*background-size: cover;*/
 }
 
 *,
@@ -17,10 +36,14 @@ body, html {
   box-sizing: border-box;
 }
 
-#flex-container {
+#map-timeline-section {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  /*width: 100%;*/
   height: 100%;
 }
 
@@ -28,6 +51,7 @@ body, html {
   position: relative;
   width: 75%;
   height: 100%;
+  margin-right: 8px;
   /*border: 1px solid #000;*/
 }
 
@@ -35,11 +59,10 @@ body, html {
   position: relative;
   width: 25%;
   min-height: 100%;
-  border: 1px solid #000;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-/*  background: #456990*/
+  /*background-image: url("timeline_background.jpg");*/
 }
 
 #timeline-list{
@@ -53,7 +76,7 @@ body, html {
   width: 6px; /* width of the line */
   left: 10%; /* put it on the left side of it's container */
   padding-top: 30px; /* padding between list items */
-  background: #fff;
+  background: #2E4B5F;
 }
  
 #timeline ul li::after { /* the circles */
@@ -65,14 +88,18 @@ body, html {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: inherit;
+  background: #699782;
+}
+
+#timeline ul li:hover {
+  color: red;
 }
 
 #timeline ul li div { /* the text boxes */
   position: relative;
   bottom: 0;
   padding: 15px;
-  background: #f9ddc5;
+  background: #2E4B5F;
   left:30px;
   width: 200px;
 }
@@ -86,7 +113,7 @@ body, html {
   border-style: solid;
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #f9ddc5 transparent transparent;
+  border-color: transparent #2E4B5F transparent transparent;
 }
 
 .quiz {
@@ -144,5 +171,44 @@ body, html {
 
 .show-incorrect{
   background-color: red;
+}
+
+li {
+  color: #FFEBD1;
+  font-size: 1.1em;
+}
+
+#video-section {
+  width: 100%;
+  height: 580px;
+  background-color: #F1F1EE;
+}
+
+#video-article {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#video {
+/*  width: 768px;
+  height: 432px;
+  margin-top: 50px;*/
+  /*margin-right: auto;
+  margin-left: auto;*/
+}
+
+.video {
+  width: 854px;
+  height: 480px;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  background-color: white;
 }
 
