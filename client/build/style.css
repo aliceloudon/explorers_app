@@ -128,3 +128,13 @@ body, html {
   width: 100%;
 }
 
+.quiz-answer-container{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+
+.quiz-answer-button{
+  flex-basis: 50%;
+}
+

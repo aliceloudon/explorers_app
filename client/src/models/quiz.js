@@ -17,17 +17,17 @@ Quiz.prototype = {
     request.send()
   },
 
-  getQuestions: function(numberToGet){
-    var selectedQuestions = []
-    var allQuestions = this.questions
-    while(selectedQuestions.length < numberToGet){
-      var randomIndex = Math.floor(Math.random() * (this.questions.length))
-      selectedQuestions.push(allQuestions[randomIndex])
-      allQuestions.splice(randomIndex, 1)
-      if(allQuestions.length === 0) {break}
+  randomiseArray: function(numberToGet, arrayToRandomise){
+    var selectedItems = []
+    var allItems = arrayToRandomise
+    while(selectedItems.length < numberToGet){
+      var randomIndex = Math.floor(Math.random() * (allItems.length))
+      selectedItems.push(allItems[randomIndex])
+      allItems.splice(randomIndex, 1)
+      if(allItems.length === 0) {break}
     }
-    return selectedQuestions
-  }
+    return selectedItems
+  },
 }
 
 module.exports = Quiz

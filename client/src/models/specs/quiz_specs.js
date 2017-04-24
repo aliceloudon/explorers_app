@@ -85,13 +85,13 @@ describe("Quiz", function(){
 
   it("can return five random questions", function(){
     var firstFive = questions.slice(0, 4)
-    var actual = quiz.getQuestions(5)
+    var actual = quiz.randomiseArray(5, quiz.questions)
     assert.notDeepEqual(firstFive, actual)
     assert.strictEqual(5, actual.length)
   })
 
   it("won't infinite loop getting questions", function(){
-    var actual = quiz.getQuestions(10)
+    var actual = quiz.randomiseArray(10, quiz.questions)
     assert.strictEqual(6, actual.length)
   })
 
