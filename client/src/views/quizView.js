@@ -3,6 +3,7 @@ var QuizView = function(quizWindow, quizContent, closeButton, quiz){
   this.quizContent = quizContent
   this.closeButton = closeButton
   this.quiz = quiz
+  this.questionsToAsk = []
 }
 
 QuizView.prototype = {
@@ -20,8 +21,8 @@ QuizView.prototype = {
     this.quizContent.appendChild(text)
     this.quizContent.appendChild(beginButton)
     beginButton.addEventListener('click', function(){
-      console.log('begin')
-      // get some questions from the quiz as an array
+      this.questionsToAsk = this.quiz.getQuestions(5)
+      console.log(this.questionsToAsk)
       // ask the first question
       // each question gets asked until the array is finished, show a score
     }.bind(this))

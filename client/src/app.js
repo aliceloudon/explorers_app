@@ -20,7 +20,6 @@ var app = function(){
   })
 
   var quiz = new Quiz("http://localhost:3000/api/quiz")
-
   var quizWindow = document.getElementById("quiz-window")
   var quizContent = document.getElementById("quiz-content")
   var quizButton = document.getElementById("quiz-button")
@@ -30,7 +29,7 @@ var app = function(){
     quizWindow.style.display = "none"
   })
 
-  var quizView = new QuizView(quizWindow, quizContent, closeButton)
+  var quizView = new QuizView(quizWindow, quizContent, closeButton, quiz)
 
   quiz.makeRequest(function(questions){
     quizButton.addEventListener('click', function(){
