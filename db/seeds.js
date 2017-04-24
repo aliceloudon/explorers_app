@@ -161,8 +161,3 @@ db.questions.insert([
   },
 
 ])
-
-db.close()
-
- 
-
