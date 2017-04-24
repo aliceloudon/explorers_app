@@ -43,6 +43,11 @@ Quiz.prototype = {
       }
     }
     
+  },
+
+  reset: function(){
+    this.score = 0
+    this.answeredQuestions = []
   }
 }
 

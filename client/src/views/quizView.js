@@ -10,6 +10,7 @@ var QuizView = function(quizWindow, quizContent, closeButton, quiz){
 QuizView.prototype = {
   beginQuiz: function(questions){
     this.quizContent.innerHTML = ""
+    this.quiz.reset()
     var header = document.createElement("h3")
     header.innerText = "Quiz yourself on what you've learned!"
     var text = document.createElement("p")
