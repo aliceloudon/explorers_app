@@ -124,4 +124,10 @@ describe("Quiz", function(){
     assert.strictEqual(0, quiz.score)
   })
 
+  it("can't answer the same question twice", function(){
+    quiz.checkAnswer(correctAnswer, question)
+    quiz.checkAnswer(correctAnswer, question)
+    assert.strictEqual(1, quiz.score)
+  })
+
 })
