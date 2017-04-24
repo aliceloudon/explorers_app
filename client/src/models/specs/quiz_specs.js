@@ -71,6 +71,10 @@ describe("Quiz", function(){
 
   it("has a url", function(){
     assert.strictEqual("url", quiz.url);
+  })  
+
+  it("starts with no questions", function(){
+    assert.strictEqual(0, emptyQuiz.questions.length);
   })
 
 })
