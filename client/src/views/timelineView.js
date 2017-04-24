@@ -4,7 +4,7 @@ var TimelineView = function(timelineList){
 
 TimelineView.prototype = {
 
-  render: function(explorers, mapView, videoView){
+  render: function(explorers, mapView, videoView, textInfoView){
     explorers.forEach(function(explorer){
       var itemContainer = document.createElement('div')
       var li = document.createElement('li')
@@ -17,6 +17,7 @@ TimelineView.prototype = {
         mapView.clearLines()
         mapView.addMarkers(explorer)
         videoView.render(explorer)
+        textInfoView.render(explorer)
       })
     }.bind(this))
   }
