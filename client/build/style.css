@@ -98,24 +98,15 @@ li {
   font-size: 1.1em;
 }
 
-#memory-game{
-  background: #CCC;
-  border:#999 1px solid;
-  width: 800px;
-  height: 540px;
-  padding: 24px;
-  margin: 0px auto;
-}
-/*The below represents the back of the cards*/
-#memory-game > div{
-  background: #FF3399;
-  border: #000 1px solid;
-  width: 71px;
-  height: 71px;
+#memory-game{ width: 800px; }
+ul { padding: 0;  margin: 0;}
+li {
+  padding: 0;
   float: left;
-  margin: 10px
-  padding: 20px;
-  font-size: 64px;
-  cursor: pointer;
-  text-align: center;
+  margin: 10px;
+  list-style: none;
+  outline: solid;
+  width: 150px;
+  height: 150px;
 }
+
