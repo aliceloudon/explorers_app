@@ -124,3 +124,7 @@ body, html {
     cursor: pointer;
 }
 
+.begin-quiz-button{
+  width: 100%;
+}
+

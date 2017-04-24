@@ -132,6 +132,24 @@ db.questions.insert([
       {text: "David Livingstone", correct: false}
     ]
   },
+  {
+    question: "dummy question",
+    answers: [
+      {text: "correct", correct: true},
+      {text: "wrong", correct: false},
+      {text: "no", correct: false},
+      {text: "not this", correct: false}
+    ]
+  },
+  {
+    question: "dummy question2",
+    answers: [
+      {text: "correct2", correct: true},
+      {text: "wrong2", correct: false},
+      {text: "no2", correct: false},
+      {text: "not this2", correct: false}
+    ]
+  },
 
 ])
 
