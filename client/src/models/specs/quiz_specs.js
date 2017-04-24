@@ -136,4 +136,10 @@ describe("Quiz", function(){
     assert.strictEqual(0, quiz.score)
   })
 
+  it("can reset answered questions", function(){
+    quiz.checkAnswer(correctAnswer, question)
+    quiz.reset()
+    assert.strictEqual(0, quiz.answeredQuestions.length)
+  })
+
 })
