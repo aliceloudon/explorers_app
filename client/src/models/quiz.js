@@ -15,6 +15,17 @@ Quiz.prototype = {
       }
     }.bind(this)
     request.send()
+  },
+
+  getQuestions: function(numberToGet){
+    var selectedQuestions = []
+    var allQuestions = this.questions
+    while(selectedQuestions.length < numberToGet){
+      var randomIndex = Math.floor(Math.random() * (this.questions.length))
+      selectedQuestions.push(allQuestions[randomIndex])
+      allQuestions.splice(randomIndex, 1)
+    }
+    return selectedQuestions
   }
 }
 

@@ -83,4 +83,12 @@ describe("Quiz", function(){
     assert.strictEqual(questions[2], quiz.questions[2]);
   })
 
+  it("can return five random questions", function(){
+    var firstFive = questions.slice(0, 4)
+    var actual = quiz.getQuestions(5)
+    console.log(actual)
+    assert.notDeepEqual(firstFive, actual)
+    assert.strictEqual(5, actual.length)
+  })
+
 })
