@@ -23,7 +23,6 @@ QuizView.prototype = {
     this.quizContent.appendChild(beginButton)
     beginButton.addEventListener('click', function(){
       this.questionsToAsk = this.quiz.randomiseArray(this.numberOfQuestions, this.quiz.questions)
-      console.log(this.questionsToAsk)
       this.displayQuestion(this.questionsToAsk[0])
       // each question gets asked until the array is finished, show a score
     }.bind(this))
@@ -41,28 +40,28 @@ QuizView.prototype = {
     var answerContainer = document.createElement('div')
     answerContainer.className = "quiz-answer-container"
     var randomisedAnswers = this.quiz.randomiseArray(questionToAsk.answers.length, questionToAsk.answers)
+    var self = this
     randomisedAnswers.forEach(function(answer){
       var button = document.createElement('button')
-      button.value = answer.correct
+      button.value = JSON.stringify(answer)
       button.innerText = answer.text
       button.className = "quiz-answer-button"
-      var self = this
-      button.addEventListener('click', function(){
-        self.quiz.checkAnswer(this.value)
 
+      button.addEventListener('click', function(){
         var buttons = answerContainer.childNodes
         buttons.forEach(function(button){
-          console.log(this.value)
-          if(button.value === "true"){
+          var buttonAnswer = JSON.parse(button.value)
+          if(buttonAnswer.correct){
             button.className += " show-correct"
           } else {
             button.className += " show-incorrect"
           }
         })
-
+        self.quiz.checkAnswer(JSON.parse(this.value), questionToAsk)
       })
       answerContainer.appendChild(button)
     })
+      
     this.quizContent.appendChild(answerContainer)
 
   },

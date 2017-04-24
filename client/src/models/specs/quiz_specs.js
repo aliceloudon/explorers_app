@@ -6,6 +6,9 @@ describe("Quiz", function(){
   var quiz
   var emptyQuiz
   var questions
+  var question
+  var correctAnswer
+  var incorrectAnswer
 
   beforeEach(function(){
 
@@ -69,6 +72,18 @@ describe("Quiz", function(){
 
     ]
     quiz.questions = questions
+
+    question = {
+      question: "question1",
+      answers: [
+        {text: "correct1", correct: true},
+        {text: "wrong1-1", correct: false},
+        {text: "wrong1-2", correct: false},
+        {text: "wrong1-3", correct: false}
+      ]
+    }
+    correctAnswer = {text: "correct", correct: true}
+    incorrectAnswer = {text: "correct", correct: false}
   })
 
   it("has a url", function(){
@@ -100,12 +115,12 @@ describe("Quiz", function(){
   })
 
   it("increases score on true", function(){
-    quiz.checkAnswer("true")
+    quiz.checkAnswer(correctAnswer, question)
     assert.strictEqual(1, quiz.score)
   })
 
   it("doesn't increase score on false", function(){
-    quiz.checkAnswer("false")
+    quiz.checkAnswer(incorrectAnswer, question)
     assert.strictEqual(0, quiz.score)
   })
 

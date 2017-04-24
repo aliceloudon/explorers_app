@@ -2,6 +2,7 @@ var Quiz = function(url){
   this.url = url
   this.questions = []
   this.score = 0
+  this.answeredQuestions = []
 }
 
 Quiz.prototype = {
@@ -33,10 +34,15 @@ Quiz.prototype = {
     return selectedItems
   },
 
-  checkAnswer: function(correctOrNot){
-    if(correctOrNot === "true"){
-      this.score += 1
+  checkAnswer: function(answer, question){
+    if(!this.answeredQuestions.includes(question)){
+      if(answer.correct === true){
+        console.log('correct')
+        this.score += 1
+        this.answeredQuestions.push(question)
+      }
     }
+    
   }
 }
 
