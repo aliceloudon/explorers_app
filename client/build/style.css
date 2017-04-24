@@ -132,15 +132,16 @@ li {
   flex-direction: row;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 #video {
-  /*border: solid 1px black;*/
-  width: 854px;
-  height: 480px;
-  margin-top: 50px;
-  margin-right: auto;
-  margin-left: auto;
+/*  width: 768px;
+  height: 432px;
+  margin-top: 50px;*/
+  /*margin-right: auto;
+  margin-left: auto;*/
 }
 
 .video {
