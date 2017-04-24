@@ -119,6 +119,11 @@ describe("Quiz", function(){
     assert.strictEqual(1, quiz.score)
   })
 
+  it("adds a question to answered questions", function(){
+    quiz.checkAnswer(correctAnswer, question)
+    assert.strictEqual(1, quiz.answeredQuestions.length)
+  })
+
   it("doesn't increase score on false", function(){
     quiz.checkAnswer(incorrectAnswer, question)
     assert.strictEqual(0, quiz.score)
