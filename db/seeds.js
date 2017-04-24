@@ -10,7 +10,8 @@ db.discoveries.insert([
      startcoord: {lat: -17.533333, lng: -149.833333},
      endcoord: {lat: -36.848461, lng:  174.763336},
      info: "Traditional Polynesian navigation was used for thousands of years to make long voyages across thousands of miles of the open Pacific Ocean. Navigators travelled to small inhabited islands using wayfinding techniques and knowledge passed by oral tradition.  Polynesians are believed to have spread eastward from the Samoan Islands into the Marquesas, the Society Islands, the Hawaiian Islands and Easter Island; and south to New Zealand in approximately 800CE, leading to many distinctive but related cultures.",
-     image: "https://s-media-cache-ak0.pinimg.com/originals/7a/58/48/7a5848809181cfafbffaa79a8e2d0c8f.jpg"
+     image: "https://s-media-cache-ak0.pinimg.com/originals/7a/58/48/7a5848809181cfafbffaa79a8e2d0c8f.jpg",
+     url: "https://www.youtube.com/embed/WzrOhVOVvVg"
    },
   {
     date: "1492", 
