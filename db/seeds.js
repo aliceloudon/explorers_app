@@ -35,6 +35,17 @@ db.discoveries.insert([
       url: 'https://www.youtube.com/embed/Y94s85-Crew'
   },
   {
+      date: "1642",
+      title: "First European Contanct With New Zealand",
+      name: "Abel Tasman",
+      nationality: "Dutch",
+      startcoord: {lat: -6.121435, lng: 106.774124},
+      endcoord: {lat: -40.9347, lng:  172.9722},
+      info: "<p><b>Abel Tasman</b> Was sent into the South Pacific to see if there were any undiscovered lands or a sea route to Chile.  The expedition had two ships, the <i>Heemskerck</i> and the <i>Zeehaen</i>, leaving Jakarta in August 1642.  After traveling South they changed course East, discovering Tasmania before landing on New Zealand's South Island on the 18th of December.</p><p>Initial contact with the Maori was tense, and the explorers left after being attacked by war canoes.  On the way back, they sighter Fiji, though didn't land and returned to Jakarta in June 1943.  The expedition was counted as a success, though it was felt that Tasmin should have explored farther inland.</p>",
+      image: "https://upload.wikimedia.org/wikipedia/commons/f/f8/AbelTasman.jpg",
+      url: "https://www.youtube.com/embed/vGA8laJAdk4"
+  },
+  {
       date: "1766",
       title: "First woman to circumnavigate the world",
       name: "Jeanne Baret",
@@ -44,6 +55,17 @@ db.discoveries.insert([
       info: "<p>Born in 1740 in France’s Loire Valley, <b>Jeanne Baret</b> overcame her poverty-stricken childhood to circumnavigate the globe before any other woman in recorded history and play a key role in identifying hundreds of plant species. In the early 1760s she became the lover and assistant of the well-known botanist Philibert Commerson, possibly using her familiarity with medicinal plants to contribute to his research. A few years later, the celebrated explorer Louis Antoine de Bougainville invited Commerson to join a team of experts who would sail around the world in a grand show of France’s scientific preeminence.</p><p>Who would help Commerson with his fieldwork during the long journey? While Baret was the obvious choice, a royal ordinance in force at the time forbade women from traveling on French Navy vessels. To get around the problem, the couple hatched an elaborate plot in which Baret dressed as a man and showed up on the dock to offer her services—introducing herself as “Jean”—just before Bougainville’s ship, the Etoile, set sail in December 1766. As the expedition made its way toward South America, Baret spent much of her time evading the crew and caring for the sickly Commerson. Arriving in Uruguay in February 1767, the pair began setting out on botanizing missions, amassing more than 6,000 specimens in two years.</p>",
       image: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Jeanne_Barret.jpg",
       url: "https://www.youtube.com/embed/54l_ESqVoHU"
+  },
+  {
+      date: "1768",
+      title: "James Cook's first voyage of discovery",
+      name: "James Cook",
+      nationality: "British",
+      startcoord: {lat: 50.376289, lng: -4.143841},
+      endcoord: {lat: -33.9930, lng: 151.1753},
+      info: "<p>In 1766, Admiralty engaged <b>James Cook</b> to command a scientific voyage to the Pacific Ocean. The purpose of the voyage was to observe and record the transit of Venus across the Sun.  This took place in Tahiti in April 1768, Cook then opened sealed orders for the second part of his voyage.</p><p>Cook was to take his ship, the <i>HMS Endeavour</i> into the south pacific to look for <i>Terra Australis</i>, a rich southern continent that was believed to exist.  After circumnavigating and mapping the coast of New Zealand, Cook went West, becoming the first Eupropean to reach the East coast of Australia.  He landed in Botany Bay, making contact with Aboriginal tribes and collecting many plant samples.</p><p>During the return trip, the ship ran aground on the Great Barrier Reef and was delayed for seven weeks while repairs were made.  The <i>Endeavour</i> made stops in Jakarta and the Cape of Good Hope, reeaching the British island of St. Helena in 1771.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Captainjamescookportrait.jpg",
+      url: "https://www.youtube.com/embed/yRGpv5K2XMg"
   },
   {
       date: "1855",
@@ -142,21 +164,30 @@ db.questions.insert([
     ]
   },
   {
-    question: "dummy question",
+    question: "What was the purpose of James Cook's voyage of discovery?",
     answers: [
-      {text: "correct", correct: true},
-      {text: "wrong", correct: false},
-      {text: "no", correct: false},
-      {text: "not this", correct: false}
+      {text: "To observe Venus and to search for Terra Australis", correct: true},
+      {text: "To observe Venus", correct: false},
+      {text: "To search for Terra Australis", correct: false},
+      {text: "To search for a North passage around the Americas", correct: false}
     ]
   },
   {
-    question: "dummy question2",
+    question: "What were Christopher Columbus' crew afraid of when attempting to cross the Atlantic?",
     answers: [
-      {text: "correct2", correct: true},
-      {text: "wrong2", correct: false},
-      {text: "no2", correct: false},
-      {text: "not this2", correct: false}
+      {text: "Sea Monsters", correct: true},
+      {text: "Storms", correct: false},
+      {text: "Getting lost", correct: false},
+      {text: "Their wives", correct: false}
+    ]
+  },
+  {
+    question: "Amelia Earhart dissapeared attemting to..?",
+    answers: [
+      {text: "Fly around the world", correct: true},
+      {text: "Sail around the world", correct: false},
+      {text: "Walk accross America", correct: false},
+      {text: "Fly the the North pole", correct: false}
     ]
   },
 
