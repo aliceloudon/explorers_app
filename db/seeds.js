@@ -9,9 +9,8 @@ db.discoveries.insert([
      nationality: "Polynesian",
      startcoord: {lat: -17.533333, lng: -149.833333},
      endcoord: {lat: -36.848461, lng:  174.763336},
-     info: "Traditional Polynesian navigation was used for thousands of years to make long voyages across thousands of miles of the open Pacific Ocean. Navigators travelled to small inhabited islands using wayfinding techniques and knowledge passed by oral tradition.  Polynesians are believed to have spread eastward from the Samoan Islands into the Marquesas, the Society Islands, the Hawaiian Islands and Easter Island; and south to New Zealand, leading to many distinctive but related cultures.",
-     image: "https://s-media-cache-ak0.pinimg.com/originals/7a/58/48/7a5848809181cfafbffaa79a8e2d0c8f.jpg", 
-     url: "https://www.youtube.com/embed/tuJk_a4iWj0"
+     info: "Traditional Polynesian navigation was used for thousands of years to make long voyages across thousands of miles of the open Pacific Ocean. Navigators travelled to small inhabited islands using wayfinding techniques and knowledge passed by oral tradition.  Polynesians are believed to have spread eastward from the Samoan Islands into the Marquesas, the Society Islands, the Hawaiian Islands and Easter Island; and south to New Zealand in approximately 800CE, leading to many distinctive but related cultures.",
+     image: "https://s-media-cache-ak0.pinimg.com/originals/7a/58/48/7a5848809181cfafbffaa79a8e2d0c8f.jpg"
    },
   {
     date: "1492", 
@@ -112,7 +111,56 @@ db.discoveries.insert([
     image: "http://www.suzimcalpine.com/wp-content/uploads/2013/05/sir-edmund-hillary.jpg",
     url: "https://www.youtube.com/embed/mPB5ZERTdTI" 
   }
-  ])
+])
+
+db.questions.insert([
+  {
+    question: "Who was the first person to climb Mount Everest?",
+    answers: [
+      {text: "Edumnd Hillary", correct: true},
+      {text: "Ernest Shakleton", correct: false},
+      {text: "Roald Amundsen", correct: false},
+      {text: "David Livingstone", correct: false}
+    ]
+  },
+  {
+    question: "In which year did the first circumnavigation of the world take place?",
+    answers: [
+      {text: "1519", correct: true},
+      {text: "1507", correct: false},
+      {text: "1546", correct: false},
+      {text: "1533", correct: false}
+    ]
+  },
+  {
+    question: "Who's ship Endurance became trapped in Antarctic Ice?",
+    answers: [
+      {text: "Ernest Shakleton", correct: true},
+      {text: "Edumnd Hillary", correct: false},
+      {text: "Roald Amundsen", correct: false},
+      {text: "David Livingstone", correct: false}
+    ]
+  },
+  {
+    question: "dummy question",
+    answers: [
+      {text: "correct", correct: true},
+      {text: "wrong", correct: false},
+      {text: "no", correct: false},
+      {text: "not this", correct: false}
+    ]
+  },
+  {
+    question: "dummy question2",
+    answers: [
+      {text: "correct2", correct: true},
+      {text: "wrong2", correct: false},
+      {text: "no2", correct: false},
+      {text: "not this2", correct: false}
+    ]
+  },
+
+])
 
  
 
