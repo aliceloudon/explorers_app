@@ -5,6 +5,7 @@ var QuizView = function(quizWindow, quizContent, closeButton, quiz){
   this.quiz = quiz
   this.questionsToAsk = []
   this.numberOfQuestions = 5
+  this.currentQuestion = 0
 }
 
 QuizView.prototype = {
@@ -24,8 +25,8 @@ QuizView.prototype = {
     this.quizContent.appendChild(beginButton)
     beginButton.addEventListener('click', function(){
       this.questionsToAsk = this.quiz.randomiseArray(this.numberOfQuestions, this.quiz.questions)
-      this.displayQuestion(this.questionsToAsk[0])
-      // each question gets asked until the array is finished, show a score
+      this.currentQuestion = 0
+      this.displayQuestion(this.questionsToAsk[this.currentQuestion])
     }.bind(this))
     this.quizWindow.style.display = "block"
   },
@@ -59,6 +60,12 @@ QuizView.prototype = {
           }
         })
         self.quiz.checkAnswer(JSON.parse(this.value), questionToAsk)
+        self.currentQuestion += 1
+        if(self.currentQuestion < self.numberOfQuestions){
+          var nextQuestion = self.questionsToAsk[self.currentQuestion]
+          var nextQuestionDisplay = function(){self.displayQuestion(nextQuestion)}
+          window.setTimeout(nextQuestionDisplay, 2000);
+        }
       })
       answerContainer.appendChild(button)
     })

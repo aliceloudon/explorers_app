@@ -37,7 +37,6 @@ Quiz.prototype = {
   checkAnswer: function(answer, question){
     if(!this.answeredQuestions.includes(question)){
       if(answer.correct === true){
-        console.log('correct')
         this.score += 1
         this.answeredQuestions.push(question)
       }
