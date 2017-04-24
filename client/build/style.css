@@ -5,21 +5,9 @@
 
 #launch-image {
   width: 100%;
-  /*background-image: url("launch-image.")*/
   height: 100%;
   background-color: #FECD07;
 }
-
-h1 {
-    text-align: center;
-    font-family: tahoma;
-    color: grey;
-}
-
-
-/*body {
-  margin-right: 15%;
-}*/
 
 body, html {
   height: 100%;
@@ -52,7 +40,6 @@ body, html {
   width: 75%;
   height: 100%;
   margin-right: 8px;
-  /*border: 1px solid #000;*/
 }
 
 #timeline {
@@ -62,6 +49,7 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background-color: #456990;
   /*background-image: url("timeline_background.jpg");*/
 }
 
@@ -76,7 +64,7 @@ body, html {
   width: 6px; /* width of the line */
   left: 10%; /* put it on the left side of it's container */
   padding-top: 30px; /* padding between list items */
-  background: #2E4B5F;
+  background: #fff;
 }
  
 #timeline ul li::after { /* the circles */
@@ -88,7 +76,7 @@ body, html {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #699782;
+  background: #F45B69;
 }
 
 #timeline ul li:hover {
@@ -99,9 +87,9 @@ body, html {
   position: relative;
   bottom: 0;
   padding: 15px;
-  background: #2E4B5F;
+  background: #F45B69;
   left:30px;
-  width: 200px;
+  width: 180px;
 }
 
 #timeline ul li div::before { /* the < connecting the box and the circle */
@@ -113,12 +101,13 @@ body, html {
   border-style: solid;
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #2E4B5F transparent transparent;
+  border-color: transparent #F45B69 transparent transparent;
 }
 
 li {
-  color: #FFEBD1;
-  font-size: 1.1em;
+  color: white;
+  font-size: 0.9em;
+  font-family: "Helvetica Neue";
 }
 
 #video-section {
