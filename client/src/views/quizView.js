@@ -40,12 +40,16 @@ QuizView.prototype = {
     var answerContainer = document.createElement('div')
     answerContainer.className = "quiz-answer-container"
     var randomisedAnswers = this.quiz.randomiseArray(questionToAsk.answers.length, questionToAsk.answers)
-    console.log(randomisedAnswers)
     randomisedAnswers.forEach(function(answer){
       var button = document.createElement('button')
       button.value = answer.correct
       button.innerText = answer.text
       button.className = "quiz-answer-button"
+      var self = this
+      button.addEventListener('click', function(){
+        self.quiz.checkAnswer(this.value)
+
+      })
       answerContainer.appendChild(button)
     })
     this.quizContent.appendChild(answerContainer)
