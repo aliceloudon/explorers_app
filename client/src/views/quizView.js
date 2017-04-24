@@ -35,6 +35,20 @@ QuizView.prototype = {
     this.quizContent.innerHTML = ""
     this.quizContent.appendChild(this.closeButton)
 
+    var quizStats = document.createElement("div")
+    quizStats.className = "quiz-stats"
+    var questionNumber = document.createElement("p")
+    questionNumber.innerText = "Question " + (this.currentQuestion + 1)
+    var score = document.createElement("p")
+    score.id = "score"
+    score.innerText = this.quiz.score + "/" + this.numberOfQuestions
+
+    quizStats.appendChild(questionNumber)
+    quizStats.appendChild(score)
+
+    this.quizContent.appendChild(quizStats)
+
+
     var question = document.createElement("h4")
     question.innerText = questionToAsk.question
     this.quizContent.appendChild(question)
@@ -60,11 +74,15 @@ QuizView.prototype = {
           }
         })
         self.quiz.checkAnswer(JSON.parse(this.value), questionToAsk)
+        var score = document.querySelector("#score")
+        score.innerText = self.quiz.score + "/" + self.numberOfQuestions
         self.currentQuestion += 1
         if(self.currentQuestion < self.numberOfQuestions){
           var nextQuestion = self.questionsToAsk[self.currentQuestion]
           var nextQuestionDisplay = function(){self.displayQuestion(nextQuestion)}
           window.setTimeout(nextQuestionDisplay, 2000);
+        } else {
+          self.displayResults()
         }
       })
       answerContainer.appendChild(button)
@@ -73,6 +91,14 @@ QuizView.prototype = {
     this.quizContent.appendChild(answerContainer)
 
   },
+
+  displayResults: function(){
+    this.quizContent.innerHTML = ""
+    this.quizContent.appendChild(this.closeButton)
+    var results = document.createElement("h3")
+    results.innerText = "You scored " + this.quiz.score + " out of " + this.numberOfQuestions + "!"
+    this.quizContent.appendChild(results)
+  }
 
 }
 
