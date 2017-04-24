@@ -24,6 +24,7 @@ Quiz.prototype = {
       var randomIndex = Math.floor(Math.random() * (this.questions.length))
       selectedQuestions.push(allQuestions[randomIndex])
       allQuestions.splice(randomIndex, 1)
+      if(allQuestions.length === 0) {break}
     }
     return selectedQuestions
   }
