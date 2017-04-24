@@ -138,3 +138,11 @@ body, html {
   flex-basis: 50%;
 }
 
+.show-correct{
+  background-color: green;
+}
+
+.show-incorrect{
+  background-color: red;
+}
+

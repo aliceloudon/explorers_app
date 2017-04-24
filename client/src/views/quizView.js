@@ -23,6 +23,7 @@ QuizView.prototype = {
     this.quizContent.appendChild(beginButton)
     beginButton.addEventListener('click', function(){
       this.questionsToAsk = this.quiz.randomiseArray(this.numberOfQuestions, this.quiz.questions)
+      console.log(this.questionsToAsk)
       this.displayQuestion(this.questionsToAsk[0])
       // each question gets asked until the array is finished, show a score
     }.bind(this))
@@ -48,6 +49,16 @@ QuizView.prototype = {
       var self = this
       button.addEventListener('click', function(){
         self.quiz.checkAnswer(this.value)
+
+        var buttons = answerContainer.childNodes
+        buttons.forEach(function(button){
+          console.log(this.value)
+          if(button.value === "true"){
+            button.className += " show-correct"
+          } else {
+            button.className += " show-incorrect"
+          }
+        })
 
       })
       answerContainer.appendChild(button)

@@ -33,6 +33,7 @@ var app = function(){
 
   quiz.makeRequest(function(questions){
     quizButton.addEventListener('click', function(){
+      console.log(quiz.questions)
       quizView.beginQuiz(quiz)
     })
   })

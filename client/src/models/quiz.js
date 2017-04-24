@@ -1,6 +1,7 @@
 var Quiz = function(url){
   this.url = url
   this.questions = []
+  this.score = 0
 }
 
 Quiz.prototype = {
@@ -19,7 +20,10 @@ Quiz.prototype = {
 
   randomiseArray: function(numberToGet, arrayToRandomise){
     var selectedItems = []
-    var allItems = arrayToRandomise
+    var allItems = []
+    arrayToRandomise.forEach(function(item){
+      allItems.push(item)
+    })
     while(selectedItems.length < numberToGet){
       var randomIndex = Math.floor(Math.random() * (allItems.length))
       selectedItems.push(allItems[randomIndex])
@@ -28,6 +32,12 @@ Quiz.prototype = {
     }
     return selectedItems
   },
+
+  checkAnswer: function(correctOrNot){
+    if(correctOrNot === "true"){
+      this.score += 1
+    }
+  }
 }
 
 module.exports = Quiz

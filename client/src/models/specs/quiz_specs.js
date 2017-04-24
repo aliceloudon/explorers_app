@@ -95,4 +95,8 @@ describe("Quiz", function(){
     assert.strictEqual(6, actual.length)
   })
 
+  it("starts with a score of 0", function(){
+    assert.strictEqual(0, quiz.score)
+  })
+
 })
