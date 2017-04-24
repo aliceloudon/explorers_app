@@ -5,12 +5,13 @@ describe("Quiz", function(){
 
   var quiz
   var emptyQuiz
+  var questions
 
   beforeEach(function(){
 
     emptyQuiz = new Quiz("url")
     quiz = new Quiz("url")
-    quiz.questions = [
+    questions = [
       {
         question: "question1",
         answers: [
@@ -67,6 +68,7 @@ describe("Quiz", function(){
     },
 
     ]
+    quiz.questions = questions
   })
 
   it("has a url", function(){
@@ -75,6 +77,10 @@ describe("Quiz", function(){
 
   it("starts with no questions", function(){
     assert.strictEqual(0, emptyQuiz.questions.length);
+  })
+
+  it("can get questions by index", function(){
+    assert.strictEqual(questions[2], quiz.questions[2]);
   })
 
 })
