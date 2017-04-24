@@ -1,6 +1,7 @@
 var ExplorersList = require("./models/explorersList")
 var MapView = require("./views/mapView")
 var TimelineView = require("./views/timelineView")
+var VideoView = require("./views/videoView")
 
 var app = function(){
 
@@ -11,6 +12,7 @@ var app = function(){
   var mapView = new MapView(mapContainer, center, zoom)
   var explorersList = new ExplorersList("http://localhost:3000/api/explorers")
   var timelineView = new TimelineView(document.querySelector('#timeline-list'))
+  var videoView = new VideoView(document.querySelector('#video'))
   
 
   explorersList.makeRequest(function(explorers){
@@ -27,7 +29,7 @@ var app = function(){
       // })
     // })
   
-    timelineView.render(explorers, mapView)
+    timelineView.render(explorers, mapView, videoView)
 
 
   })

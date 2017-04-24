@@ -4,19 +4,32 @@
   <title>Explorers</title>
   <script src="bundle.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
 
 </head>
+
 <body>
-  <div id='flex-container'>
-    <div id='map'></div>
-    <div id='timeline'>
-      <ul id='timeline-list'></ul>
-    </div>
-  </div>
-  <div id='memory-game'></div>
-  
-  <!-- <ul></ul> -->
+
+  <nav>
+    <img id=bbc-navbar src="bbc_navbar.png">
+  </nav>
+
+  <section id='launch-image'></section>
+
+  <section id='map-timeline-section'>
+      <figure id='map'></figure>
+      <figure id='timeline'>
+        <ul id='timeline-list'></ul>
+      </figure>
+  </section>
+
+  <section id='video-section'>
+    <article id='video-article'>
+      <figure id='video'></figure>
+    </article>
+  </section>
+
+  <section id='game'></section>
+
 </body>
 </html>
