@@ -1,13 +1,13 @@
-header {
+
+#bbc-navbar {
   width: 100%;
-  background-image: url("bbc_navbar.png");
-  background-size: cover;
 }
 
 #launch-image {
   width: 100%;
+  /*background-image: url("launch-image.")*/
   height: 100%;
-  background-color: #F1F1EE;
+  background-color: #FECD07;
 }
 
 h1 {
@@ -17,9 +17,9 @@ h1 {
 }
 
 
-body {
+/*body {
   margin-right: 15%;
-}
+}*/
 
 body, html {
   height: 100%;
@@ -62,7 +62,7 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-image: url("timeline_background.jpg");
+  /*background-image: url("timeline_background.jpg");*/
 }
 
 #timeline-list{
@@ -121,9 +121,28 @@ li {
   font-size: 1.1em;
 }
 
+#video-section {
+  width: 100%;
+  height: 550px;
+  background-color: #F1F1EE;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#video {
+  border: solid 1px black;
+  width: 600px;
+  height: 450px;
+  margin-top: 50px;
+}
 
 #game {
   width: 100%;
   height: 100%;
-  background-color: #F1F1EE;
+  background-color: white;
 }
