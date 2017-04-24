@@ -60,7 +60,7 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #456990;
+  background-color: #9BC2E3;
 }
 
 #timeline-list{
@@ -86,7 +86,7 @@ body, html {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #F45B69;
+  background: #ED8D4B;
 }
 
 #timeline ul li:hover {
@@ -97,7 +97,7 @@ body, html {
   position: relative;
   bottom: 0;
   padding: 15px;
-  background: #F45B69;
+  background: #ED8D4B;
   left:30px;
   width: 180px;
 }
@@ -111,7 +111,23 @@ body, html {
   border-style: solid;
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #F45B69 transparent transparent;
+  border-color: transparent #ED8D4B transparent transparent;
+}
+
+#boy-speak {
+  height: 400px;
+  width: 400px;
+  position:absolute;
+  right:0;
+  top:1800px;
+}
+
+#girl-speak {
+  height: 400px;
+  width: 400px;
+  position:absolute;
+  left:0;
+  top:1170px;
 }
 
 .quiz {
