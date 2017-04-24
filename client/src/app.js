@@ -18,8 +18,8 @@ var app = function(){
   
 
   explorersList.makeRequest(function(explorers){
-  
-  timelineView.render(explorers, mapView, videoView)
+    timelineView.render(explorers, mapView, videoView)
+  })
 
   var quiz = new Quiz("http://localhost:3000/api/quiz")
   var quizWindow = document.getElementById("quiz-window")
