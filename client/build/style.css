@@ -130,6 +130,33 @@ body, html {
   top:1170px;
 }
 
+#quiz-section{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  background: #ED8D4B;
+  padding: 20px
+}
+
+#quiz-section p {
+  margin: 0 auto;
+  padding-bottom: 10px; 
+  color: white;
+  font-size:2em;
+  font-family: "Helvetica Neue"
+}
+
+#quiz-button{
+  width: 75%;
+  margin: 0 auto;
+  background-color: #9BC2E3;
+  color: white;
+  padding: 14px 40px;
+  font-size: 1.5em;
+  font-family: "Helvetica Neue"
+  border-radius: 4px;
+}
+
 .quiz {
     display: none; 
     position: fixed; 
