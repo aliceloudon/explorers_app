@@ -1,4 +1,4 @@
-var TileGame = function(explorers){
+var TileGame = function(explorers, tileGameView){
   this.images = []
   explorers.forEach(function(explorer){
     this.images.push(explorer.image)
@@ -8,7 +8,8 @@ var TileGame = function(explorers){
   this.memory_values = [];
   this.flipped_memory_tiles = [];
   this.tiles_flipped = 0;
-  this.permanently_flipped_tiles =[]
+  this.permanently_flipped_tiles = []
+  this.tileGameView = null
 }
 
 TileGame.prototype = {
@@ -24,8 +25,11 @@ TileGame.prototype = {
   },
 
   newBoard: function(tileGameView){
+    this.tileGameView = tileGameView
+    this.tileGameView.innerHTML = ""
     this.tiles_flipped = 0;
-    var output = '';
+    this.permanently_flipped_tiles = []
+    this.tiles = []
     this.memory_tile_shuffle();
     for(var i = 0; i < this.images.length; i++){
       var img = document.createElement('img')
@@ -71,7 +75,7 @@ TileGame.prototype = {
           // Check to see if the whole board is cleared
           if(this.tiles_flipped == this.images.length){
             alert("You win!");
-            this.newBoard();
+            this.newBoard(this.tileGameView);
           }
         } else {
           function flipTileToBack(){
