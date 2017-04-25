@@ -214,6 +214,11 @@ body, html {
   background-color: red;
 }
 
+.quiz-image{
+  max-height: 200px;
+  max-width: 200px;
+}
+
 li {
   color: white;
   font-size: 0.9em;

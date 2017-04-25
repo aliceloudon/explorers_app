@@ -61,6 +61,13 @@ QuizView.prototype = {
     question.innerText = questionToAsk.question
     this.quizContent.appendChild(question)
 
+    if(questionToAsk.image){
+      var img = document.createElement('img')
+      img.src = questionToAsk.image
+      img.className = "quiz-image"
+      this.quizContent.appendChild(img)
+    }
+
     //randomise the order of the answers
     var answerContainer = document.createElement('div')
     answerContainer.className = "quiz-answer-container"
