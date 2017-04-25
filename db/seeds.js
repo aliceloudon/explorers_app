@@ -42,6 +42,10 @@ db.discoveries.insert([
       nationality: "Dutch",
       startcoord: {lat: -6.121435, lng: 106.774124},
       endcoord: {lat: -40.9347, lng:  172.9722},
+      waypoints: [
+        {lat: -20, lng: 60},
+        {lat: -41.4545, lng: 145.9707}
+      ],
       info: "<p><b>Abel Tasman</b> Was sent into the South Pacific to see if there were any undiscovered lands or a sea route to Chile.  The expedition had two ships, the <i>Heemskerck</i> and the <i>Zeehaen</i>, leaving Jakarta in August 1642.  After traveling South they changed course East, discovering Tasmania before landing on New Zealand's South Island on the 18th of December.</p><p>Initial contact with the Maori was tense, and the explorers left after being attacked by war canoes.  On the way back, they sighter Fiji, though didn't land and returned to Jakarta in June 1943.  The expedition was counted as a success, though it was felt that Tasmin should have explored farther inland.</p>",
       image: "https://upload.wikimedia.org/wikipedia/commons/f/f8/AbelTasman.jpg",
       url: "https://www.youtube.com/embed/vGA8laJAdk4"

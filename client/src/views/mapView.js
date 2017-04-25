@@ -83,22 +83,35 @@ MapView.prototype = {
       scale: 4,
     }
 
-    var line = new google.maps.Polyline({
-        path: [
-            new google.maps.LatLng(explorer.startcoord.lat, explorer.startcoord.lng), 
-            new google.maps.LatLng(explorer.endcoord.lat, explorer.endcoord.lng)
-        ],
-        strokeColor: "#FF0000",
-        strokeOpacity: 0,
-        icons: [{
-            icon: lineSymbol,
-            offset: '0',
-            repeat: '20px'
-          }],
-        geodesic: true,
-        map: this.googleMap
-    })
-    this.lines.push(line)
+    var allCoords = []
+
+    allCoords.push(explorer.startcoord)
+    if(explorer.waypoints){
+      explorer.waypoints.forEach(function(coords){
+        allCoords.push(coords)
+      })
+    }
+    allCoords.push(explorer.endcoord)
+    
+
+    for(var i = 0; i < allCoords.length - 1; i++){
+      var line = new google.maps.Polyline({
+          path: [
+              new google.maps.LatLng(allCoords[i].lat, allCoords[i].lng), 
+              new google.maps.LatLng(allCoords[i+1].lat, allCoords[i+1].lng)
+          ],
+          strokeColor: "#FF0000",
+          strokeOpacity: 0,
+          icons: [{
+              icon: lineSymbol,
+              offset: '0',
+              repeat: '20px'
+            }],
+          geodesic: true,
+          map: this.googleMap
+      })
+      this.lines.push(line)
+    }
 
     this.googleMap.setZoom(3)
     this.googleMap.setCenter(explorer.endcoord)
