@@ -23,25 +23,6 @@ var app = function(){
   
   var textInfoView = new TextInfoView(document.querySelector('#info-box'))
 
-<<<<<<< HEAD
- 
-=======
-
-  // var tileGame = new TileGame(explorersList, tileGameView)
-  // var tileGameWindow = document.getElementById("tileGame-window")
-  // var closeGameButton = document.getElementById("close-game")
-
-  // closeGameButton.addEventListener('click', function(){
-  //   tileGameWindow.style.display = "none"
-  // })
-
-  // window.onclick = function(event){
-  //   if (event.target == tileGameWindow){
-  //     tileGameWindow.style.display = "none";
-  //   }
-  // }
->>>>>>> b64cf11f3db5aa3038c195bd2b0b7badab59c704
-
   explorersList.makeRequest(function(explorers){  
     var tileGameView = new TileGameView(document.querySelector('#memory-game'), explorers)
     tileGameView.render()
@@ -54,10 +35,6 @@ var app = function(){
   var quizContent = document.getElementById("quiz-content")
   var quizButton = document.getElementById("quiz-button")
   var closeButton = document.getElementById("close")
-
-  closeButton.addEventListener('click', function(){
-    quizWindow.style.display = "none"
-  })
 
   var quizView = new QuizView(quizWindow, quizContent, closeButton, quiz)
 

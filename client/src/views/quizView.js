@@ -6,6 +6,10 @@ var QuizView = function(quizWindow, quizContent, closeButton, quiz){
   this.questionsToAsk = []
   this.numberOfQuestions = 5
   this.currentQuestion = 0
+
+  this.closeButton.addEventListener('click', function(){
+    quizWindow.style.display = "none"
+  })
 }
 
 QuizView.prototype = {
