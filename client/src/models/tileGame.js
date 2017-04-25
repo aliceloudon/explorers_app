@@ -2,7 +2,6 @@ var TileGame = function(explorers, tileGameView){
   this.images = []
   explorers.forEach(function(explorer){
     this.images.push(explorer.image)
-    this.images.push(explorer.image)
   }.bind(this))
   this.tiles = []
   this.memory_values = [];
@@ -14,14 +13,26 @@ var TileGame = function(explorers, tileGameView){
 
 TileGame.prototype = {
 
-  memory_tile_shuffle: function(){
-    var i = this.images.length, j, temp;
+  shuffleArray: function(array){
+    var i = array.length, j, temp;
     while(--i > 0){
       j = Math.floor(Math.random() * (i+1));
-      temp = this.images[j];
-      this.images[j] = this.images[i];
-      this.images[i] = temp;
+      temp = array[j];
+      array[j] = array[i];
+      array[i] = temp;
+    } 
+    return array
+  },
+
+  memory_tile_shuffle: function(){
+    var selectedImages = []
+    var shuffledImages = this.shuffleArray(this.images)
+    for (var i = 0; i < 6; i++){
+      selectedImages.push(shuffledImages[i])
+      selectedImages.push(shuffledImages[i])
     }
+    this.shuffleArray(selectedImages)
+    this.images = selectedImages
   },
 
   newBoard: function(tileGameView){
@@ -84,15 +95,6 @@ TileGame.prototype = {
             closeGameButton.addEventListener('click', function(){
               tileGameWindow.style.display = "none"
             })
-
-            // window.onclick = function(event){
-            //   if (event.target !== tileGameWindow){
-            //     tileGameWindow.style.display = "none";
-            //   }
-            // }
-
-            // alert("You win!");
-
             
             this.newBoard(this.tileGameView);
           }
