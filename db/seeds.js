@@ -145,7 +145,7 @@ db.questions.insert([
     question: "Who was the first person to climb Mount Everest?",
     answers: [
       {text: "Edumnd Hillary", correct: true},
-      {text: "Ernest Shakleton", correct: false},
+      {text: "Ernest Shackleton", correct: false},
       {text: "Roald Amundsen", correct: false},
       {text: "David Livingstone", correct: false}
     ]
@@ -162,7 +162,7 @@ db.questions.insert([
   {
     question: "Who's ship Endurance became trapped in Antarctic Ice?",
     answers: [
-      {text: "Ernest Shakleton", correct: true},
+      {text: "Ernest Shackleton", correct: true},
       {text: "Edumnd Hillary", correct: false},
       {text: "Roald Amundsen", correct: false},
       {text: "David Livingstone", correct: false}
@@ -193,6 +193,16 @@ db.questions.insert([
       {text: "Sail around the world", correct: false},
       {text: "Walk accross America", correct: false},
       {text: "Fly the the North pole", correct: false}
+    ]
+  },
+  {
+    question: "Which explorer is this?",
+    image: "http://www.suzimcalpine.com/wp-content/uploads/2013/05/sir-edmund-hillary.jpg",
+    answers: [
+      {text: "Edmund Hillary", correct: true},
+      {text: "Ernest Shackleton", correct: false},
+      {text: "James Cook", correct: false},
+      {text: "Roald Amundsen", correct: false}
     ]
   },
 
