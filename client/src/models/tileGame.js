@@ -88,7 +88,7 @@ TileGame.prototype = {
 
             var tileGameWindow = document.getElementById("tileGame-window")
             var closeGameButton = document.getElementById("close-game")
-            console.log("close-game", closeGameButton)
+            
 
             tileGameWindow.style.display = "block"
 
