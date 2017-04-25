@@ -2,6 +2,7 @@ var ExplorersList = require("./models/explorersList")
 var MapView = require("./views/mapView")
 var TimelineView = require("./views/timelineView")
 var VideoView = require("./views/videoView")
+var TileGameView = require("./views/tileGameView")
 
 var app = function(){
 
@@ -13,29 +14,15 @@ var app = function(){
   var explorersList = new ExplorersList("http://localhost:3000/api/explorers")
   var timelineView = new TimelineView(document.querySelector('#timeline-list'))
   var videoView = new VideoView(document.querySelector('#video'))
+
   
 
   explorersList.makeRequest(function(explorers){
+    var tileGameView = new TileGameView(document.querySelector('#memory-game'), explorers)
+    tileGameView.render()
 
-    // explorers.forEach(function(explorer){
-    //   var explorerToShow = explorer
-    //   var button = document.createElement('button')
-    //   button.innerHTML = explorer.name
-    //   var ul = document.querySelector('ul')
-    //   ul.appendChild(button)
-      // button.addEventListener('click', function(){
-      //   mapView.clearMarkers()
-      //   mapView.addMarkers(explorerToShow)
-      // })
-    // })
-  
     timelineView.render(explorers, mapView, videoView)
-
-
   })
-
-
-
 
 }
 

@@ -1,81 +1,93 @@
+var TileGame = function(explorers){
+  this.images = []
+  explorers.forEach(function(explorer){
+    this.images.push(explorer.image)
+    this.images.push(explorer.image)
+  }.bind(this))
+  this.tiles = []
+  this.memory_values = [];
+  this.flipped_memory_tiles = [];
+  this.tiles_flipped = 0;
+  this.permanently_flipped_tiles =[]
+}
 
+TileGame.prototype = {
 
-// TRYING TO REFACTOR SO THAT TILEGAME USES A RECOGNISED STRUCTURE
-// IT DOESN'T SO FAR
-// I HAVE ATTEMPTED TO REFACTOR UP TO THIS POINT - MANY CONFLICTS BELOW WHERE OLD STRUCTURE IS REFERENCED
-
-var images = [
-    ("images/1"),
-    ("images/2"),
-    ("images/3"),
-    ("images/4"),
-    ("images/5"),
-    ("images/6"),
-    ("images/7"),
-    ("images/8"),
-    ("images/9"),
-    ("images/0")
-];
-
-var memory_values = [];
-var memory_tile_ids = [];
-var tiles_flipped = 0;
-Array.prototype.memory_tile_shuffle = function(){
-    var i = this.length, j, temp;
+  memory_tile_shuffle: function(){
+    var i = this.images.length, j, temp;
     while(--i > 0){
-        j = Math.floor(Math.random() * (i+1));
-        temp = this[j];
-        this[j] = this[i];
-        this[i] = temp;
+      j = Math.floor(Math.random() * (i+1));
+      temp = this.images[j];
+      this.images[j] = this.images[i];
+      this.images[i] = temp;
     }
-}
-function newBoard(){
-        tiles_flipped = 0;
-        var output = '';
-    images.memory_tile_shuffle();
-        for(var i = 0; i < images.length; i++){
-                output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+images[i]+'\')"></div>';
-        }
-        document.getElementById('memory-game').innerHTML = output;
-}
-function memoryFlipTile(tile,val){
-        if(tile.innerHTML == "" && memory_values.length < 2){
-                tile.style.background = '#FFF';
-                tile.innerHTML = val;
-                if(memory_values.length == 0){
-                        memory_values.push(val);
-                        memory_tile_ids.push(tile.id);
-                } else if(memory_values.length == 1){
-                        memory_values.push(val);
-                        memory_tile_ids.push(tile.id);
-                        if(memory_values[0] == memory_values[1]){
-                                tiles_flipped += 2;
-                                // Clear both arrays
-                                memory_values = [];
-                memory_tile_ids = [];
-                                // Check to see if the whole board is cleared
-                                if(tiles_flipped == images.length){
-                                        alert("You win!");
-                                        document.getElementById('memory_board').innerHTML = "";
-                                        newBoard();
-                                }
-                        } else {
-                                function flip2Back(){
-                                    // Flip the 2 tiles back over
-                                    var tile_1 = document.getElementById(memory_tile_ids[0]);
-                                    var tile_2 = document.getElementById(memory_tile_ids[1]);
-                                    tile_1.style.background = 'url(tile_bg.jpg) no-repeat';
-                    tile_1.innerHTML = "";
-                                    tile_2.style.background = 'url(tile_bg.jpg) no-repeat';
-                    tile_2.innerHTML = "";
-                                    // Clear both arrays
-                                    memory_values = [];
-                    memory_tile_ids = [];
-                                }
-                                setTimeout(flip2Back, 700);
-                        }
-                }
-        }
+  },
+
+  newBoard: function(tileGameView){
+    this.tiles_flipped = 0;
+    var output = '';
+    this.memory_tile_shuffle();
+    for(var i = 0; i < this.images.length; i++){
+      var img = document.createElement('img')
+      img.id = "tile_" + i
+      img.className = "tile"
+      img.src = "http://is5.mzstatic.com/image/thumb/Purple30/v4/86/18/5d/86185d80-b6b4-dc11-f72d-772eb950a35c/source/1200x630bb.jpg"
+      var self = this
+      var onClick = function(){
+        self.memoryFlipTile(this)
+      }
+      img.addEventListener('click', onClick)
+      tileGameView.appendChild(img)
+      this.tiles.push(img)
+      // output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+this.images[i]+'\')"></div>'
+    }
+    // document.getElementById('memory-game').innerHTML = output;
+
+  },
+
+  memoryFlipTile: function(tile){
+    var self = this
+    var index = this.tiles.indexOf(tile)
+    var tileSrc = this.images[index]
+    
+    if(this.permanently_flipped_tiles.includes(tile)){
+      return
+    }
+
+    tile.src = tileSrc
+      if(this.memory_values.length == 0){
+        this.memory_values.push(tileSrc);
+        this.flipped_memory_tiles.push(tile);
+      }else if(this.memory_values.length == 1){
+        this.memory_values.push(tileSrc);
+        this.flipped_memory_tiles.push(tile);
+        if(this.memory_values[0] == this.memory_values[1]){
+          this.tiles_flipped += 2;
+          // Clear both arrays
+          this.memory_values = [];
+          this.permanently_flipped_tiles.push(this.flipped_memory_tiles[0])
+          this.permanently_flipped_tiles.push(this.flipped_memory_tiles[1])
+          this.flipped_memory_tiles = [];
+          // Check to see if the whole board is cleared
+          if(this.tiles_flipped == this.images.length){
+            alert("You win!");
+            this.newBoard();
+          }
+        } else {
+          function flipTileToBack(){
+            // Flip the 2 tiles back over
+            var tile_1 = self.flipped_memory_tiles[0]
+            var tile_2 = self.flipped_memory_tiles[1]
+            tile_1.src = 'http://is5.mzstatic.com/image/thumb/Purple30/v4/86/18/5d/86185d80-b6b4-dc11-f72d-772eb950a35c/source/1200x630bb.jpg';
+            tile_2.src = 'http://is5.mzstatic.com/image/thumb/Purple30/v4/86/18/5d/86185d80-b6b4-dc11-f72d-772eb950a35c/source/1200x630bb.jpg';
+            // Clear both arrays
+            self.memory_values = [];
+            self.flipped_memory_tiles = [];
+          }
+        setTimeout(flipTileToBack, 700);
+      }
+    }
+  }
 }
 
-module.exports = tileGame
+module.exports = TileGame
