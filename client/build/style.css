@@ -235,8 +235,12 @@ li {
 
 #colour-in {
   height: 600px;
-  width: 800px;
-  background-color: green;
+  width: 100%;
+  background-color: grey;
   margin: 0;
 }
 
+#canvas {
+  border: solid 1px black;
+  margin: 50px 50px 50px 400px;
+}

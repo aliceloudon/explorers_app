@@ -9,13 +9,14 @@ CanvasView.prototype = {
     var self = this
     this.canvas.onclick = function(event){
       var coords = self.canvas.getBoundingClientRect()
+      console.log(coords.left, coords.top)
       console.log(event.clientX, event.clientY)
-      self.drawRectangle(event.clientX, (event.clientY-coords.top))
+      self.drawRectangle( (event.clientX - coords.left), (event.clientY - coords.top) )
     }
   },
 
   drawRectangle: function(x, y){
-    this.context.fillStyle = 'red'
+    this.context.fillStyle = 'white'
     this.context.fillRect(x, y, 40, 40)
   },
 
