@@ -1,12 +1,22 @@
 body {
   margin: 0;
+  padding: 0;
 }
 
-body, html {
-  height: 100%;
+nav {
+  background-color: black
+}
+
+#bbc-navbar {
   width: 100%;
-  background-image: url("timeline_background.jpg");
-  background-size: cover;
+}
+
+#launch-image-section {
+  width: 100%;
+}
+
+#launch-image {
+  width: 100%;
 }
 
 *,
@@ -17,29 +27,40 @@ body, html {
   box-sizing: border-box;
 }
 
-#flex-container {
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map-timeline-section {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 100%;
+  height: 600px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #map {
-  position: relative;
+  /*border: solid 1px black;*/
+  /*position: relative;*/
+  margin: 0;
   width: 75%;
-  height: 100%;
-  /*border: 1px solid #000;*/
+  margin-right: 15px;
 }
 
 #timeline {
   position: relative;
   width: 25%;
+  margin: 0;
   min-height: 100%;
-  /*border: 1px solid #000;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-/*  background: #456990*/
+  background-color: #9BC2E3;
 }
 
 #timeline-list{
@@ -53,7 +74,7 @@ body, html {
   width: 6px; /* width of the line */
   left: 10%; /* put it on the left side of it's container */
   padding-top: 30px; /* padding between list items */
-  background: #2E4B5F;
+  background: #fff;
 }
  
 #timeline ul li::after { /* the circles */
@@ -65,20 +86,20 @@ body, html {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #699782;
+  background: #ED8D4B;
 }
 
 #timeline ul li:hover {
-  color: red;
+  color: #333333;
 }
 
 #timeline ul li div { /* the text boxes */
   position: relative;
   bottom: 0;
   padding: 15px;
-  background: #2E4B5F;
+  background: #ED8D4B;
   left:30px;
-  width: 200px;
+  width: 180px;
 }
 
 #timeline ul li div::before { /* the < connecting the box and the circle */
@@ -90,10 +111,152 @@ body, html {
   border-style: solid;
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #2E4B5F transparent transparent;
+  border-color: transparent #ED8D4B transparent transparent;
+}
+
+#boy-speak {
+  height: 400px;
+  width: 400px;
+  position:absolute;
+  right:0;
+  top:1800px;
+}
+
+#girl-speak {
+  height: 400px;
+  width: 400px;
+  position:absolute;
+  left:0;
+  top:1170px;
+}
+
+#quiz-section{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  background: #ED8D4B;
+  padding: 20px
+}
+
+#quiz-section p {
+  margin: 0 auto;
+  padding-bottom: 10px; 
+  color: white;
+  font-size:2em;
+  font-family: "Helvetica Neue"
+}
+
+#quiz-button{
+  width: 75%;
+  margin: 0 auto;
+  background-color: #9BC2E3;
+  color: white;
+  padding: 14px 40px;
+  font-size: 1.5em;
+  font-family: "Helvetica Neue"
+  border-radius: 4px;
+}
+
+.quiz {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.quiz-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.begin-quiz-button{
+  width: 100%;
+}
+
+.quiz-answer-container{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+
+.quiz-answer-button{
+  flex-basis: 50%;
+}
+
+.show-correct{
+  background-color: green;
+}
+
+.show-incorrect{
+  background-color: red;
 }
 
 li {
-  color: #FFEBD1;
-  font-size: 1.1em;
+  color: white;
+  font-size: 0.9em;
+  font-family: "Helvetica Neue";
 }
+
+#video-section {
+  width: 100%;
+  height: 480px;
+  background-color: #F1F1EE;
+}
+
+#video-article {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#info-box {
+  position: relative;
+  width: 35%;
+  height: 380px;
+  margin-top: 50px;
+}
+
+#video {
+  width: 640px;
+  height: 380px;
+  margin-top: 50px;
+  margin-left: auto;
+}
+
+.video {
+  width: inherit;
+  height: inherit;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+

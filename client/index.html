@@ -4,16 +4,51 @@
   <title>Explorers</title>
   <script src="bundle.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
 </head>
+
 <body>
-  <div id='flex-container'>
-    <div id='map'></div>
-    <div id='timeline'>
-      <ul id='timeline-list'></ul>
+
+  <nav>
+    <img id='bbc-navbar' src="design-images/bbc_navbar.png">
+  </nav>
+
+  <section id='launch-image-section'>
+    <img id='launch-image' src="design-images/launch-image.jpg">
+  </section>
+
+  <section id='map-timeline-section'>
+      <figure id='map'></figure>
+      <figure id='timeline'>
+        <ul id='timeline-list'></ul>
+      </figure>
+      <figure>
+        <img id='boy-speak' src="design-images/explorer-boy-speak.png">
+      </figure>
+      <figure>
+        <img id='girl-speak' src="design-images/explorer-girl-speak.png">
+      </figure>
+  </section>
+
+  <section id='quiz-section'>
+    <p>Want to test what you've learned?</p>
+    <button id="quiz-button">Take our quiz!</button>
+  </section>
+
+  <div id="quiz-window" class="quiz">
+    <div id="quiz-content" class="quiz-content">
+      <span id="close" class="close">&times;</span>
     </div>
   </div>
-  <!-- <ul></ul> -->
+
+  <section id='video-section'>
+    <article id='video-article'>
+      <figure id='info-box'></figure>
+      <figure id='video'></figure>
+    </article>
+  </section>
+
+  <section id='game'></section>
+
 </body>
 </html>

@@ -1,6 +1,10 @@
 var ExplorersList = require("./models/explorersList")
 var MapView = require("./views/mapView")
+var QuizView = require("./views/quizView")
 var TimelineView = require("./views/timelineView")
+var Quiz = require("./models/quiz")
+var VideoView = require("./views/videoView")
+var TextInfoView = require("./views/textInfoView")
 
 var app = function(){
 
@@ -11,30 +15,32 @@ var app = function(){
   var mapView = new MapView(mapContainer, center, zoom)
   var explorersList = new ExplorersList("http://localhost:3000/api/explorers")
   var timelineView = new TimelineView(document.querySelector('#timeline-list'))
+  var videoView = new VideoView(document.querySelector('#video'))
   
+var textInfoView = new TextInfoView(document.querySelector('#info-box'))
 
-  explorersList.makeRequest(function(explorers){
+explorersList.makeRequest(function(explorers){  
+  timelineView.render(explorers, mapView, videoView, textInfoView)
+})
 
-    // explorers.forEach(function(explorer){
-    //   var explorerToShow = explorer
-    //   var button = document.createElement('button')
-    //   button.innerHTML = explorer.name
-    //   var ul = document.querySelector('ul')
-    //   ul.appendChild(button)
-      // button.addEventListener('click', function(){
-      //   mapView.clearMarkers()
-      //   mapView.addMarkers(explorerToShow)
-      // })
-    // })
-  
-    timelineView.render(explorers, mapView)
+  var quiz = new Quiz("http://localhost:3000/api/quiz")
+  var quizWindow = document.getElementById("quiz-window")
+  var quizContent = document.getElementById("quiz-content")
+  var quizButton = document.getElementById("quiz-button")
+  var closeButton = document.getElementById("close")
 
-
+  closeButton.addEventListener('click', function(){
+    quizWindow.style.display = "none"
   })
 
+  var quizView = new QuizView(quizWindow, quizContent, closeButton, quiz)
 
-
-
+  quiz.makeRequest(function(questions){
+    quizButton.addEventListener('click', function(){
+      console.log(quiz.questions)
+      quizView.beginQuiz(quiz)
+    })
+  })
 }
 
 window.onload = app

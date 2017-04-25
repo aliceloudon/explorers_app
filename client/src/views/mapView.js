@@ -14,7 +14,7 @@ var MapView = function(container, coords, zoom){
     {
         "featureType": "landscape",
         "stylers": [
-            {"color": "#DABD98"},
+            {"color": "#B5D785"},
             {"lightness": -7}
         ]
     },
@@ -29,7 +29,7 @@ var MapView = function(container, coords, zoom){
     {
         "featureType": "water",
         "stylers": [
-            {"color": "#BFC8CE"},
+            {"color": "#7ECCF6"},
             {"saturation": -69},
             {"gamma": 0.99},
             {"lightness": 43}
@@ -64,7 +64,7 @@ MapView.prototype = {
     })
     this.markers.push(endMarker)
 
-    var contentString = "<h3>" + explorer.title + "</h3>" + "<p><b>" + explorer.name + "</b></p>" +"<p>" + explorer.info + "</p>" + "<p>" + "<img width='80' src=" + explorer.image + ">" + "</p>" +  "<iframe width='400' height='240' src=" + '"' + explorer.url + '"' + "frameborder='0' allowfullscreen></iframe>"
+    var contentString = "<h3>" + explorer.title + "</h3>" + "<p><b>" + explorer.name + "</b></p>" + "<p>" + "<img width='150' src=" + explorer.image + ">"
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString, maxWidth: 400

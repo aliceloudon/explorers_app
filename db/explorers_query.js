@@ -6,10 +6,21 @@ var ExplorersQuery = function(){
 
 ExplorersQuery.prototype = {
 
-  all: function(onQueryFinished){
+  allExplorers: function(onQueryFinished){
     MongoClient.connect(this.url, function(err, db){
       if (db){
         var collection = db.collection('discoveries')
+        collection.find().toArray(function(err, docs){
+          onQueryFinished(docs)
+        })
+      }
+    })
+  },
+
+  allQuestions: function(onQueryFinished){
+    MongoClient.connect(this.url, function(err, db){
+      if (db){
+        var collection = db.collection('questions')
         collection.find().toArray(function(err, docs){
           onQueryFinished(docs)
         })
