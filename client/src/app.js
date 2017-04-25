@@ -5,6 +5,7 @@ var TimelineView = require("./views/timelineView")
 var Quiz = require("./models/quiz")
 var VideoView = require("./views/videoView")
 var TextInfoView = require("./views/textInfoView")
+var CanvasView = require("./views/canvasView")
 
 var app = function(){
 
@@ -23,6 +24,8 @@ explorersList.makeRequest(function(explorers){
   timelineView.render(explorers, mapView, videoView, textInfoView)
 })
 
+
+// ------------------------QUIZ---------------------------
   var quiz = new Quiz("http://localhost:3000/api/quiz")
   var quizWindow = document.getElementById("quiz-window")
   var quizContent = document.getElementById("quiz-content")
@@ -41,6 +44,18 @@ explorersList.makeRequest(function(explorers){
       quizView.beginQuiz(quiz)
     })
   })
+
+
+// --------------CANVAS--------------------------------
+  var canvas = document.getElementById('canvas')
+  console.log('canvas', canvas)
+  var context = canvas.getContext('2d')
+  console.log(context)
+
+  var canvasView = new CanvasView(canvas, context)
+  canvasView.render()
+
+
 }
 
 window.onload = app

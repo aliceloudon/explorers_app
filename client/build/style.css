@@ -239,9 +239,9 @@ li {
   background-color: #9BC2E3;
 }
 
-canvas {
-  background-color: yellow;
-  margin: 50px 50px 29% 29%;
+#canvas {
+  border: solid 1px white;
+  margin: 50px 50px 50px 400px;
   width: 600px;
   height: 500px;
 }
