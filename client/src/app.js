@@ -4,6 +4,7 @@ var QuizView = require("./views/quizView")
 var TimelineView = require("./views/timelineView")
 var Quiz = require("./models/quiz")
 var VideoView = require("./views/videoView")
+var TileGame = require("./models/tileGame")
 
 var TextInfoView = require("./views/textInfoView")
 
@@ -22,8 +23,21 @@ var app = function(){
   var videoView = new VideoView(document.querySelector('#video'))
 
   
-var textInfoView = new TextInfoView(document.querySelector('#info-box'))
+  var textInfoView = new TextInfoView(document.querySelector('#info-box'))
 
+  // var tileGame = new TileGame(explorersList, tileGameView)
+  // var tileGameWindow = document.getElementById("tileGame-window")
+  // var closeGameButton = document.getElementById("close-game")
+
+  // closeGameButton.addEventListener('click', function(){
+  //   tileGameWindow.style.display = "none"
+  // })
+
+  // window.onclick = function(event){
+  //   if (event.target == tileGameWindow){
+  //     tileGameWindow.style.display = "none";
+  //   }
+  // }
 
 explorersList.makeRequest(function(explorers){  
   var tileGameView = new TileGameView(document.querySelector('#memory-game'), explorers)

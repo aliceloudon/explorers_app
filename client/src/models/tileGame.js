@@ -43,9 +43,9 @@ TileGame.prototype = {
       img.addEventListener('click', onClick)
       tileGameView.appendChild(img)
       this.tiles.push(img)
-      // output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+this.images[i]+'\')"></div>'
+     
     }
-    // document.getElementById('memory-game').innerHTML = output;
+   
 
   },
 
@@ -67,24 +67,28 @@ TileGame.prototype = {
         this.flipped_memory_tiles.push(tile);
         if(this.memory_values[0] == this.memory_values[1]){
           this.tiles_flipped += 2;
-          // Clear both arrays
+         
           this.memory_values = [];
           this.permanently_flipped_tiles.push(this.flipped_memory_tiles[0])
           this.permanently_flipped_tiles.push(this.flipped_memory_tiles[1])
           this.flipped_memory_tiles = [];
-          // Check to see if the whole board is cleared
+          
           if(this.tiles_flipped == this.images.length){
+
+
             alert("You win!");
+
+            
             this.newBoard(this.tileGameView);
           }
         } else {
           function flipTileToBack(){
-            // Flip the 2 tiles back over
+            
             var tile_1 = self.flipped_memory_tiles[0]
             var tile_2 = self.flipped_memory_tiles[1]
             tile_1.src = 'http://is5.mzstatic.com/image/thumb/Purple30/v4/86/18/5d/86185d80-b6b4-dc11-f72d-772eb950a35c/source/1200x630bb.jpg';
             tile_2.src = 'http://is5.mzstatic.com/image/thumb/Purple30/v4/86/18/5d/86185d80-b6b4-dc11-f72d-772eb950a35c/source/1200x630bb.jpg';
-            // Clear both arrays
+           
             self.memory_values = [];
             self.flipped_memory_tiles = [];
           }
