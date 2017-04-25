@@ -21,6 +21,11 @@ CanvasView.prototype = {
       self.context.strokeStyle = this.value
     }
 
+    var erase = document.querySelector('#erase-button')
+    erase.onclick = function(){
+      self.context.clearRect(0, 0, w, h)
+    } // It works but it goes to the top of the page
+
   },
 
   // drawRectangle: function(x, y, strokeColour){
@@ -31,11 +36,15 @@ CanvasView.prototype = {
   drawCircle: function(x, y){
     this.context.beginPath()
     this.context.arc(x, y, 10, 0, Math.PI*2)
-    // this.context.fillStyle = 'green'
     this.context.fill()
-    // this.context.strokeStyle = 'green'
     this.context.stroke()
   }
+
+  // canvas.onmousemove = function(event){
+  //   console.log('Location:', event.x, event.y)
+  //   // drawCircle(event.x, event.y)
+  //   drawSmallCircle(event.x, event.y)
+  // }
 
 }
 
