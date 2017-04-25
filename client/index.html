@@ -6,12 +6,16 @@
   <link rel="stylesheet" type="text/css" href="canvas.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
+
+
 </head>
 
 <body>
 
   <nav>
+
     <img id='bbc-navbar' src="design-images/bbc_navbar.png">
+
   </nav>
 
   <section id='launch-image-section'>
@@ -21,7 +25,6 @@
   <section id='map-timeline-section'>
       <figure id='map'></figure>
       <figure id='timeline'>
-        <button id="quiz-button">Quiz yourself!</button>
         <ul id='timeline-list'></ul>
       </figure>
       <figure>
@@ -30,6 +33,11 @@
       <figure>
         <img id='girl-speak' src="design-images/explorer-girl-speak.png">
       </figure>
+  </section>
+
+  <section id='quiz-section'>
+    <p>Want to test what you've learned?</p>
+    <button id="quiz-button">Take our quiz!</button>
   </section>
 
   <div id="quiz-window" class="quiz">
@@ -45,7 +53,13 @@
     </article>
   </section>
 
-  <section id='game'></section>
+  <section id='memory-game'>
+   
+  </section>
+
+  <div id="tileGame-window" class="tileGame">
+    <span class="close-game">&times;</span>
+  </div>
 
   <section id='colour-in'>
     <canvas id='canvas' width="500px" height="500px" opacity=0></canvas>
