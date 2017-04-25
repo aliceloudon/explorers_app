@@ -48,13 +48,10 @@ explorersList.makeRequest(function(explorers){
 
 // --------------CANVAS--------------------------------
   var canvas = document.getElementById('canvas')
-  console.log('canvas', canvas)
   var context = canvas.getContext('2d')
-  console.log(context)
 
   var canvasView = new CanvasView(canvas, context)
   canvasView.render()
-
 
 }
 

@@ -19,20 +19,20 @@ nav {
   width: 100%;
 }
 
-*,
+/**,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+}*/
 
-body, html {
+/*body, html {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-}
+}*/
 
 #map-timeline-section {
   display: flex;
@@ -235,13 +235,8 @@ li {
 
 #colour-in {
   height: 600px;
-  width: 100%;
-  background-color: #9BC2E3;
+  width: 800px;
+  background-color: green;
+  margin: 0;
 }
 
-#canvas {
-  border: solid 1px white;
-  margin: 50px 50px 50px 400px;
-  width: 600px;
-  height: 500px;
-}

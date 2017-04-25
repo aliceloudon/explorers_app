@@ -6,24 +6,23 @@ var CanvasView = function(canvas, context){
 CanvasView.prototype = {
 
   render: function(){
-    this.context.fillStyle = 'pink'
-    this.context.fillRect(10, 10, 50, 50)
-
+    var self = this
     this.canvas.onclick = function(event){
-      console.log('clicked', event)
+      var coords = self.canvas.getBoundingClientRect()
+      console.log(event.clientX, event.clientY)
+      self.drawRectangle(event.clientX, (event.clientY-coords.top))
     }
-  }
+  },
 
-  // onclick: function(event){
-  //   console.log('Location:', event.x, event.y)
-  //   drawCircle(event.x, event.y)
-  //   drawSmallCircle(event.x, event.y)
-  // },
+  drawRectangle: function(x, y){
+    this.context.fillStyle = 'red'
+    this.context.fillRect(x, y, 40, 40)
+  },
 
-  // onmousemove: function(event){
-  //   console.log('Location:', event.x, event.y)
-  //   // drawCircle(event.x, event.y)
-  //   drawSmallCircle(event.x, event.y)
+  // drawCircle: function(x, y){
+  //   this.context.beginPath()
+  //   this.context.arc(x, y, 5, 0, Math.PI*2, true)
+  //   this.context.stroke()
   // }
 
 }
