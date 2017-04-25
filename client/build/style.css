@@ -239,8 +239,16 @@ li {
   background-color: grey;
   margin: 0;
 }
+/*
+#colour-in-image {
+  height: 500px;
+  width: 500px;
+  margin: 50px 50px 50px 400px;
+}*/
 
 #canvas {
   border: solid 1px black;
   margin: 50px 50px 50px 400px;
+  background-image: url('design-images/colour-in.jpg');
+  background-size: 100%
 }

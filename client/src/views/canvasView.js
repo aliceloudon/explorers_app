@@ -16,8 +16,8 @@ CanvasView.prototype = {
   },
 
   drawRectangle: function(x, y){
-    this.context.fillStyle = 'white'
-    this.context.fillRect(x, y, 40, 40)
+    this.context.fillStyle = 'orange'
+    this.context.fillRect(x, y, 10, 10)
   },
 
   // drawCircle: function(x, y){
