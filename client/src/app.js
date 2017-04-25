@@ -5,9 +5,7 @@ var TimelineView = require("./views/timelineView")
 var Quiz = require("./models/quiz")
 var VideoView = require("./views/videoView")
 var TileGame = require("./models/tileGame")
-
 var TextInfoView = require("./views/textInfoView")
-
 var TileGameView = require("./views/tileGameView")
 
 
@@ -25,6 +23,7 @@ var app = function(){
   
   var textInfoView = new TextInfoView(document.querySelector('#info-box'))
 
+
   // var tileGame = new TileGame(explorersList, tileGameView)
   // var tileGameWindow = document.getElementById("tileGame-window")
   // var closeGameButton = document.getElementById("close-game")
@@ -39,13 +38,12 @@ var app = function(){
   //   }
   // }
 
-explorersList.makeRequest(function(explorers){  
-  var tileGameView = new TileGameView(document.querySelector('#memory-game'), explorers)
-  tileGameView.render()
+  explorersList.makeRequest(function(explorers){  
+    var tileGameView = new TileGameView(document.querySelector('#memory-game'), explorers)
+    tileGameView.render()
 
-  timelineView.render(explorers, mapView, videoView)
-  timelineView.render(explorers, mapView, videoView, textInfoView)
-})
+    timelineView.render(explorers, mapView, videoView, textInfoView)
+  })
 
   var quiz = new Quiz("http://localhost:3000/api/quiz")
   var quizWindow = document.getElementById("quiz-window")
