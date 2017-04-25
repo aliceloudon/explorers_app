@@ -214,6 +214,11 @@ body, html {
   background-color: red;
 }
 
+.quiz-image{
+  max-height: 200px;
+  max-width: 200px;
+}
+
 li {
   color: white;
   font-size: 0.9em;
@@ -298,16 +303,31 @@ ol {
 
 
 .tile {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  max-height: 150px;
   border: solid black 1px;
   margin: 5px;
 }
 
 
 
-#memory-game{ width: 800px; height: 100%; display: flex; flex-direction: row; flex-wrap: wrap;}
-#memory-game ul { padding: 0;  margin: 0;}
+#memory-game{ 
+  margin: 0 auto;
+  width: 750px; 
+  height: 100%; 
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("http://www.freecarbonoffsets.com/certs/images/wmPreviews/compassRoseBordered.jpg")
+}
+
+#memory-game ul { 
+  padding: 0;  
+  margin: 0;
+}
+
 #memory-game li {
   padding: 0;
   float: left;
@@ -345,4 +365,15 @@ ol {
     cursor: pointer;
 }
 
-
+#tileGame-content {
+    font-size: 24px;
+    font-family: "Helvetica Neue";
+    text-align: center;
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    max-width: 100%;
+    max-height: 100%;
+}
