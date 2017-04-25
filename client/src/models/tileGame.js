@@ -95,6 +95,12 @@ TileGame.prototype = {
             closeGameButton.addEventListener('click', function(){
               tileGameWindow.style.display = "none"
             })
+
+            window.onclick = function(event) {
+                if (event.target == tileGameWindow) {
+                    tileGameWindow.style.display = "none";
+                }
+            }
             
             this.newBoard(this.tileGameView);
           }
