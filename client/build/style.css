@@ -272,8 +272,21 @@ li {
 
 
 
-#memory-game{ width: 800px; height: 100%; display: flex; flex-direction: row; flex-wrap: wrap;}
-#memory-game ul { padding: 0;  margin: 0;}
+#memory-game{ 
+  width: 800px; 
+  height: 100%; 
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#memory-game ul { 
+  padding: 0;  
+  margin: 0;
+}
+
 #memory-game li {
   padding: 0;
   float: left;
@@ -311,3 +324,10 @@ li {
     cursor: pointer;
 }
 
+#tileGame-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}

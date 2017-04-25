@@ -25,19 +25,7 @@ var app = function(){
   
   var textInfoView = new TextInfoView(document.querySelector('#info-box'))
 
-  // var tileGame = new TileGame(explorersList, tileGameView)
-  // var tileGameWindow = document.getElementById("tileGame-window")
-  // var closeGameButton = document.getElementById("close-game")
-
-  // closeGameButton.addEventListener('click', function(){
-  //   tileGameWindow.style.display = "none"
-  // })
-
-  // window.onclick = function(event){
-  //   if (event.target == tileGameWindow){
-  //     tileGameWindow.style.display = "none";
-  //   }
-  // }
+ 
 
 explorersList.makeRequest(function(explorers){  
   var tileGameView = new TileGameView(document.querySelector('#memory-game'), explorers)

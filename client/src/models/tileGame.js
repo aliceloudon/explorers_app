@@ -75,8 +75,23 @@ TileGame.prototype = {
           
           if(this.tiles_flipped == this.images.length){
 
+            var tileGameWindow = document.getElementById("tileGame-window")
+            var closeGameButton = document.getElementById("close-game")
+            console.log("close-game", closeGameButton)
 
-            alert("You win!");
+            tileGameWindow.style.display = "block"
+
+            closeGameButton.addEventListener('click', function(){
+              tileGameWindow.style.display = "none"
+            })
+
+            // window.onclick = function(event){
+            //   if (event.target !== tileGameWindow){
+            //     tileGameWindow.style.display = "none";
+            //   }
+            // }
+
+            // alert("You win!");
 
             
             this.newBoard(this.tileGameView);
