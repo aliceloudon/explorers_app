@@ -74,7 +74,11 @@ TileGame.prototype = {
           this.flipped_memory_tiles = [];
           
           if(this.tiles_flipped == this.images.length){
+
+
             alert("You win!");
+
+            
             this.newBoard(this.tileGameView);
           }
         } else {
