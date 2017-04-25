@@ -4,7 +4,11 @@ var QuizView = require("./views/quizView")
 var TimelineView = require("./views/timelineView")
 var Quiz = require("./models/quiz")
 var VideoView = require("./views/videoView")
+
 var TextInfoView = require("./views/textInfoView")
+
+var TileGameView = require("./views/tileGameView")
+
 
 var app = function(){
 
@@ -16,10 +20,16 @@ var app = function(){
   var explorersList = new ExplorersList("http://localhost:3000/api/explorers")
   var timelineView = new TimelineView(document.querySelector('#timeline-list'))
   var videoView = new VideoView(document.querySelector('#video'))
+
   
 var textInfoView = new TextInfoView(document.querySelector('#info-box'))
 
+
 explorersList.makeRequest(function(explorers){  
+  var tileGameView = new TileGameView(document.querySelector('#memory-game'), explorers)
+  tileGameView.render()
+
+  timelineView.render(explorers, mapView, videoView)
   timelineView.render(explorers, mapView, videoView, textInfoView)
 })
 
@@ -41,6 +51,7 @@ explorersList.makeRequest(function(explorers){
       quizView.beginQuiz(quiz)
     })
   })
+
 }
 
 window.onload = app
