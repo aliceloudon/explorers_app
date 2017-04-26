@@ -4,6 +4,7 @@ var TileGame = function(explorers, tileGameView){
   explorers.forEach(function(explorer){
     this.images.push(explorer.image)
   }.bind(this))
+  this.selectedImages = []
   this.tiles = []
   this.memory_values = [];
   this.flipped_memory_tiles = [];
@@ -27,16 +28,17 @@ TileGame.prototype = {
   },
 
   memory_tile_shuffle: function(){
-    var selectedImages = []
+    this.selectedImages = []
     var shuffledImages = this.shuffleArray(this.images)
 
     for (var i = 0; i < 6; i++){
-      selectedImages.push(shuffledImages[i])
-      selectedImages.push(shuffledImages[i])
+      this.selectedImages.push(shuffledImages[i])
+      this.selectedImages.push(shuffledImages[i])
     }
 
-    this.shuffleArray(selectedImages)
-    this.images = selectedImages
+    var shuffledPairs = this.shuffleArray(this.selectedImages)
+    console.log(this.selectedImages)
+    this.selectedImages = shuffledPairs
   },
 
   newBoard: function(tileGameView){
@@ -50,7 +52,7 @@ TileGame.prototype = {
     this.memory_tile_shuffle();
 
     // setting tiles to have a single background
-    for(var i = 0; i < this.images.length; i++){
+    for(var i = 0; i < this.selectedImages.length; i++){
       var img = document.createElement('img')
       img.id = "tile_" + i
       img.className = "tile"
@@ -75,7 +77,7 @@ TileGame.prototype = {
   memoryFlipTile: function(tile){
     var self = this
     var index = this.tiles.indexOf(tile)
-    var tileSrc = this.images[index]
+    var tileSrc = this.selectedImages[index]
 
 
     // catch so that matched tiles do not flip over
