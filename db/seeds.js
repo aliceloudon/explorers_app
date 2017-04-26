@@ -29,15 +29,20 @@ db.discoveries.insert([
       title: "Sailing around the world",
       name: "Ferdinand Magellan",
       nationality: "Portugese",
-      startcoord: {lat: -6.314993, lng: 143.955550},
-      endcoord: {lat: -4.677919, lng: -174.519597},
-      info: "<p>On September 20, 1519 <b>Ferdinand Magellan</b> and 237 crew members set sail on five ships from Sanlucar de Barrameda in the hopes of finding a shortcut to the Spice Islands. After three long months of sailing the Atlantic, Magellan and his crew anchored near Rio de Janeiro in the present day South American nation of Brazil. </p><p>As the ships neared the southern tip of South America, one smashed into the beach and lost all supplies. Nevertheless, in October of 1520, Magellan and his crew crossed the treacherous straits at the tip of South America, which became known as the Straits of Magellan.</p><p>Soon, the crew sailed to the Philippine Islands, where they converted natives to Christianity. During an attempt to convert the native chief, Mactan, to Christianity, Magellan was wounded by an arrow that was driven through his foot by a native warrior. Mactan, who had become upset with Magellan’s insistence that he convert, ordered his warriors to attack. They killed Magellan on April 27, 1521. Most of Magellan’s crew escaped and set sail.</p><p>With the loss of their leader, Juan Sebastian Del Cano took control of the ship and sailed for Spain. The <i>Victoria</i> made it back to Spain with only 18 men surviving, hence completing the first circumnavigation of the world.</p>",
+      startcoord: {lat: 37.392529, lng: -5.994072},
+      endcoord: {lat: 14.599512, lng: 120.984222},
+      waypoints: [
+        {lat: -58.480833, lng: -72.783333},
+        {lat: -39.172659, lng: -84.726563},
+        {lat: -19.735684, lng: -106.171875}
+      ],
+      info: "<p>On September 20, 1519 <b>Ferdinand Magellan</b> and 237 crew members set sail on five ships in the hopes of finding a shortcut to the Spice Islands. After three months, Magellan and his crew anchored near Rio de Janeiro in the present day South American nation of Brazil. </p><p>Near the southern tip of South America, one smashed into the beach and lost all supplies. Nevertheless, in October of 1520, Magellan and his crew crossed the treacherous straits at the tip of South America, which became known as the Straits of Magellan.</p><p>Soon, the crew sailed to the Philippine Islands, where they converted natives to Christianity. During an attempt to convert the native chief, Mactan, to Christianity, Magellan was wounded by an arrow that was driven through his foot. Mactan, who had become upset with Magellan’s insistence that he convert, ordered his warriors to attack. They killed Magellan on April 27, 1521 while most of Magellan’s crew escaped.</p><p>With the loss of their leader, Juan Sebastian Del Cano took control of the ship and sailed for Spain. The <i>Victoria</i> made it back to Spain with only 18 men surviving, completing the first circumnavigation of the world.</p>",
       image: "http://cdn.history.com/sites/2/2013/11/142084686-AB.jpeg",
       url: 'https://www.youtube.com/embed/Y94s85-Crew'
   },
   {
       date: "1642",
-      title: "First European Contanct With New Zealand",
+      title: "First European Contact With New Zealand",
       name: "Abel Tasman",
       nationality: "Dutch",
       startcoord: {lat: -6.121435, lng: 106.774124},
@@ -57,7 +62,16 @@ db.discoveries.insert([
       nationality: "French",
       startcoord: {lat: 45.943067, lng: -0.956036},
       endcoord: {lat: -35.017063, lng: -56.030273},
-      info: "<p>Born in 1740 in France’s Loire Valley, <b>Jeanne Baret</b> overcame her poverty-stricken childhood to circumnavigate the globe before any other woman in recorded history and play a key role in identifying hundreds of plant species. In the early 1760s she became the lover and assistant of the well-known botanist Philibert Commerson, possibly using her familiarity with medicinal plants to contribute to his research. A few years later, the celebrated explorer Louis Antoine de Bougainville invited Commerson to join a team of experts who would sail around the world in a grand show of France’s scientific preeminence.</p><p>Who would help Commerson with his fieldwork during the long journey? While Baret was the obvious choice, a royal ordinance in force at the time forbade women from traveling on French Navy vessels. To get around the problem, the couple hatched an elaborate plot in which Baret dressed as a man and showed up on the dock to offer her services—introducing herself as “Jean”—just before Bougainville’s ship, the Etoile, set sail in December 1766. As the expedition made its way toward South America, Baret spent much of her time evading the crew and caring for the sickly Commerson. Arriving in Uruguay in February 1767, the pair began setting out on botanizing missions, amassing more than 6,000 specimens in two years.</p>",
+      waypoints:[
+        {lat: 12.801088, lng: -31.289063},
+        {lat: -44.660839, lng: 17.226563},
+        {lat: -8.504970, lng: 104.414063},
+        {lat: -15.718239, lng: -153.281250},
+        {lat: -58.480833, lng: -72.783333},
+        {lat: -35.017063, lng: -56.030273},
+        {lat: 45.943067, lng: -0.956036}
+      ],
+      info: "<p>Born in 1740 in France’s Loire Valley, <b>Jeanne Baret</b> became the first woman to circumnavigate the globe in recorded history and played a key role in identifying hundreds of plant species. In the early 1760s she became the lover and assistant of the well-known botanist Philibert Commerson, using her familiarity with medicinal plants to contribute to his research. A few years later, the celebrated explorer Louis Antoine de Bougainville invited Commerson to join a team of experts who would sail around the world.</p><p>Who would help Commerson with his fieldwork during the long journey? While Baret was the obvious choice, a royal ordinance in force at the time forbade women from traveling on French Navy vessels. To get around the problem, the couple hatched an elaborate plot in which Baret dressed as a man and showed up on the dock to offer her services—introducing herself as “Jean”—just before Bougainville’s ship, the <i>Etoile</i>, set sail in December 1766. As the expedition made its way toward South America, Baret spent much of her time evading the crew and caring for the sickly Commerson. Arriving in Uruguay in February 1767, the pair began setting out on botanizing missions, amassing more than 6,000 specimens in two years.</p>",
       image: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Jeanne_Barret.jpg",
       url: "https://www.youtube.com/embed/54l_ESqVoHU"
   },
@@ -68,6 +82,9 @@ db.discoveries.insert([
       nationality: "British",
       startcoord: {lat: 50.376289, lng: -4.143841},
       endcoord: {lat: -33.9930, lng: 151.1753},
+      waypoints: [
+        {lat: -58.480833, lng: -72.783333},
+      ],
       info: "<p>In 1766, Admiralty engaged <b>James Cook</b> to command a scientific voyage to the Pacific Ocean. The purpose of the voyage was to observe and record the transit of Venus across the Sun.  This took place in Tahiti in April 1768, Cook then opened sealed orders for the second part of his voyage.</p><p>Cook was to take his ship, the <i>HMS Endeavour</i> into the south pacific to look for <i>Terra Australis</i>, a rich southern continent that was believed to exist.  After circumnavigating and mapping the coast of New Zealand, Cook went West, becoming the first Eupropean to reach the East coast of Australia.  He landed in Botany Bay, making contact with Aboriginal tribes and collecting many plant samples.</p><p>During the return trip, the ship ran aground on the Great Barrier Reef and was delayed for seven weeks while repairs were made.  The <i>Endeavour</i> made stops in Jakarta and the Cape of Good Hope, reeaching the British island of St. Helena in 1771.",
       image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Captainjamescookportrait.jpg",
       url: "https://www.youtube.com/embed/yRGpv5K2XMg"
@@ -99,8 +116,12 @@ db.discoveries.insert([
     title: "Almost made it to the South Pole", 
     name: "Sir Ernest Shackleton",
     nationality: "Anglo-Irish",
-    startcoord: {lat: 50.371389, lng: 50.371389},
-    endcoord: {lat: -54.25, lng: -36.75}, 
+    startcoord: {lat: 50.376289, lng: -4.143841},
+    endcoord: {lat: -69.0833, lng: -51.5000}, 
+    waypoints: [
+      {lat: -34.603722, lng: -58.381592},
+      {lat: -54.413833, lng: -36.582717}
+    ],
     info: "<p><b>Sir Ernest Shackleton</b> was an Antarctic explorer, best known for leading the <i>'Endurance'</i> expedition of 1914-16. In 1914, Shackleton made his third trip to the Antarctic with the ship <i>'Endurance'</i> , planning to cross Antarctica via the South Pole. Early in 1915, <i>'Endurance'</i> became trapped in the ice, and ten months later sank. Shackleton's crew had already abandoned the ship to live on the floating ice.</p> <p>In April 1916, they set off in three small boats, eventually reaching Elephant Island. Taking five crew members, Shackleton went to find help. In a small boat, the six men spent 16 days crossing 1,300 km of ocean to reach South Georgia and then trekked across the island to a whaling station. The remaining men from the <i>'Endurance'</i> were rescued in August 1916. Not one member of the expedition died.</p>", 
     image: "https://www.biography.com/.image/t_share/MTE1ODA0OTcxNzgzMDYzMDUz/sir-ernest-henry-shackleton-9480091-1-raw.jpg",
     url: "https://www.youtube.com/embed/8r5jtV4vNRM" 
@@ -121,8 +142,17 @@ db.discoveries.insert([
     title: "Flying across the world",
     name: "Amelia Earhart",
     nationality: "American",
-    startcoord: {lat: -6.314993, lng: 143.955550},
+    startcoord: {lat: 21.289373, lng: -157.917480},
     endcoord: {lat: -4.677919, lng: -174.519597},
+    waypoints:[
+      {lat: 35.092945, lng: -118.125000},
+      {lat: 31.868228, lng: -81.562500},
+      {lat: -7.808963, lng: -34.101563},
+      {lat: 20.210656, lng: -14.765625},
+      {lat: 12.801088, lng: 41.132813},
+      {lat: 21.851302, lng: 89.296875},
+      {lat: -13.336175, lng: 134.648438}
+    ],
     info: "<p>On June 1st, 1937, <b>Amelia Earhart</b> and co-pilot Fred Noonan again set off to fly around the world. They first flew to San Juan, Puerto Rico, and then eastward toward Africa. At Port Darwin, Australia, Amelia and Fred were able to make crucial repairs to their airplane. Amelia reached Lae, New Guinea on June 29th. They had flown 22,000 miles and had 7,000 left to go. </p><p>Amelia had become an international hero, and the world was captivated by her determination. At this point, however, Amelia was said to be exhausted and may have alluded to the possibility that her co-pilot, Fred Noonan, was drinking. However, trouble lurked for Amelia and Fred. Shortly after Amelia left New Guinea on July 2, she sent several distress calls. While her distress calls were received, Amelia could not hear the return messages because she could not find the correct frequency on her radio. Amelia and Fred were off-course and lost over the vast Pacific Ocean. They did not have enough gas to reach their target – The Howland Islands. Amelia and Fred would never be seen or heard from again. President Roosevelt sent nine naval ships and 66 aircraft to search the area. On July 18 the search was called off.</p>",
     image: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Amelia_Earhart_1935.jpg",
     url: "https://www.youtube.com/embed/ivbh9vEkp1g"
