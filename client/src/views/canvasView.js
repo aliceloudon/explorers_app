@@ -1,6 +1,8 @@
 var CanvasView = function(canvas, context){
   this.canvas = canvas
   this.context = context
+  this.template = null
+  this.colour = null
 }
 
 CanvasView.prototype = {
@@ -14,17 +16,23 @@ CanvasView.prototype = {
       self.canvas.onmousemove = function(event){
         var coords = self.canvas.getBoundingClientRect()
         self.drawCircle( (event.clientX - coords.left), (event.clientY - coords.top), circleSize )
+        self.drawImage(self.template)
       }
     })
 
     this.canvas.addEventListener('mouseup', function(e){
       self.canvas.onmousemove = null
+      if(self.template){
+        console.log('drawing')
+      }
+      
     })
 
     var colourPicker = document.querySelector('#change-colour-input')
     colourPicker.onchange = function(){
-      self.context.fillStyle = this.value
-      self.context.strokeStyle = this.value
+      self.colour = this.value
+      self.context.fillStyle = self.colour
+      self.context.strokeStyle = self.colour
     }
 
     var brushSize = document.querySelector('#brush-size')
@@ -40,8 +48,9 @@ CanvasView.prototype = {
 
     var templateButtons = document.querySelectorAll('.template-button')
     templateButtons[0].onclick = function(){
+      self.template = 'design-images/canvas/Abel-Tasman.png'
       self.drawRectangle()
-      self.drawImage('design-images/canvas/Abel-Tasman.png')
+      self.drawImage(self.template)
     }
     templateButtons[1].onclick = function(){
       self.drawRectangle()
@@ -66,10 +75,15 @@ CanvasView.prototype = {
   },
 
   drawRectangle: function(){
+
     this.context.fillStyle = 'white'
-    
     this.context.fillRect(0, 0, 389, 500)
-    this.context.fillStyle = 'black'
+    if(this.colour){
+      this.context.fillStyle = this.colour
+    } else {
+      this.context.fillStyle = 'black'
+    }
+    
   },
 
   drawImage: function(srcString){
