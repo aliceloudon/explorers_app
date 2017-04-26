@@ -273,13 +273,12 @@ li {
   flex-direction: row;
   height: 600px;
   width: 100%;
-  background-color: grey;
+  background-image: url('design-images/jungle-image.jpg');
   margin: 0;
 }
 
 #canvas {
   position: relative;
-  border: solid 1px black;
   margin: 50px 50px 50px 400px;
   background-image: url('design-images/colour-in.jpg');
   background-size: 100%
@@ -287,16 +286,17 @@ li {
 
 #canvas-tool-form {
   position: relative;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 250px;
   /*border: solid 1px black;*/
-  margin-top: 350px;
+  margin-top: 450px;
   background-color: orange;
 
 }
 
 ol {
   font-size: 1.2em;
+  padding: 10px;
   text-decoration: none;
   list-style-type: none;
 }
