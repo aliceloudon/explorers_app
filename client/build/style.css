@@ -119,7 +119,7 @@ body, html {
   width: 400px;
   position:absolute;
   right:0;
-  top:1800px;
+  top:2550px;
 }
 
 #girl-speak {
@@ -253,6 +253,7 @@ li {
   height: 380px;
   margin-top: 50px;
   margin-left: auto;
+  background-color: white;
 }
 
 .video {
@@ -377,3 +378,8 @@ ol {
     max-width: 100%;
     max-height: 100%;
 }
+
+/*#ice {
+  width: 100%;
+  height: 600px;
+}*/
