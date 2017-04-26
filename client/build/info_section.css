@@ -18,6 +18,8 @@
   width: 35%;
   height: 380px;
   margin-top: 50px;
+  overflow-y: auto;
+  line-height: 2em;
 }
 
 #video {
