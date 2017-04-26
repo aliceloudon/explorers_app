@@ -1,0 +1,33 @@
+#video-section {
+  width: 100%;
+  height: 480px;
+  background-color: #F1F1EE;
+}
+
+#video-article {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#info-box {
+  position: relative;
+  width: 35%;
+  height: 380px;
+  margin-top: 50px;
+}
+
+#video {
+  width: 640px;
+  height: 380px;
+  margin-top: 50px;
+  margin-left: auto;
+}
+
+.video {
+  width: inherit;
+  height: inherit;
+}
