@@ -24,6 +24,15 @@
   margin-left: 15px;
 }
 
+#timeline-title{
+  text-align:center;
+  border-bottom: solid 2px white;
+  color: white;
+  padding:10px;
+  font-family: "Helvetica Neue";
+  width:100%;
+}
+
 #timeline {
   position: relative;
   width: 25%;
