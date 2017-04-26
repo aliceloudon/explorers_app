@@ -186,7 +186,7 @@ db.questions.insert([
   {
     question: "Who was the first person to climb Mount Everest?",
     answers: [
-      {text: "Edumnd Hillary", correct: true},
+      {text: "Edmund Hillary", correct: true},
       {text: "Ernest Shackleton", correct: false},
       {text: "Roald Amundsen", correct: false},
       {text: "David Livingstone", correct: false}
@@ -205,7 +205,7 @@ db.questions.insert([
     question: "Who's ship Endurance became trapped in Antarctic Ice?",
     answers: [
       {text: "Ernest Shackleton", correct: true},
-      {text: "Edumnd Hillary", correct: false},
+      {text: "Edmund Hillary", correct: false},
       {text: "Roald Amundsen", correct: false},
       {text: "David Livingstone", correct: false}
     ]
@@ -233,7 +233,7 @@ db.questions.insert([
     answers: [
       {text: "Fly around the world", correct: true},
       {text: "Sail around the world", correct: false},
-      {text: "Walk accross America", correct: false},
+      {text: "Walk across America", correct: false},
       {text: "Fly the the North pole", correct: false}
     ]
   },
