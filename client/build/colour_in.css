@@ -1,10 +1,10 @@
 #colour-title{
-  padding-top: 20px;
+  padding-top: 15px;
   text-align: center;
   color: white;
-  font-family: "Helvetica Neue";
+  font-family: 'Apple Chancery';
   background-image: url("http://forum.profantasy.com/extensions/InlineImages/image.php?AttachmentID=2402");
-  background-size: 40%;
+  background-size: 30%;
   background-position: top center;
   background-repeat: no-repeat;
 }
