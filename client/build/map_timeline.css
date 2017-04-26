@@ -98,6 +98,10 @@
   text-decoration: none;
 }
 
+#infowindowLink{
+  font-family: "Helvetica Neue";
+}
+
 li {
   color: white;
   font-size: 0.9em;
