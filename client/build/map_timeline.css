@@ -86,6 +86,11 @@
   border-color: transparent #ED8D4B transparent transparent;
 }
 
+.timeline-text{
+  color: white;
+  font-family: "Helvetica Neue";
+}
+
 li {
   color: white;
   font-size: 0.9em;
