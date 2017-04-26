@@ -86,7 +86,13 @@
   border-color: transparent #ED8D4B transparent transparent;
 }
 
-.timeline-text{
+.timeline-text a:link, .timeline-text a:visited{
+  color: white;
+  font-family: "Helvetica Neue";
+  text-decoration: none;
+}
+
+.timeline-text:visited{
   color: white;
   font-family: "Helvetica Neue";
 }
