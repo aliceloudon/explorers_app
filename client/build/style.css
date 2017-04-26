@@ -292,7 +292,10 @@ li {
   /*border: solid 1px black;*/
   margin-top: 450px;
   background-color: orange;
+}
 
+#canvas {
+  cursor: crosshair;
 }
 
 ol {
