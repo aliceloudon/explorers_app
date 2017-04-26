@@ -9,7 +9,7 @@
 #quiz-section p {
   margin: 0 auto;
   padding-bottom: 10px; 
-  color: white;
+  color: #FFFFFF;
   font-size:2em;
   font-family: "Helvetica Neue"
 }
@@ -18,7 +18,7 @@
   width: 75%;
   margin: 0 auto;
   background-color: #9BC2E3;
-  color: white;
+  color: #FFFFFF;
   padding: 14px 40px;
   font-size: 1.5em;
   font-family: "Helvetica Neue"
@@ -26,52 +26,69 @@
 }
 
 .quiz {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4);
+  font-family: "Helvetica Neue";
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 5px;
 }
 
 .quiz-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
+  background-color: #CC634D;
+  color: #EEE;
+  text-align: center;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.quiz-stats{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #EEE;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .begin-quiz-button{
   width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1em;
+  font-family: "Helvetica Neue"
 }
 
 .quiz-answer-container{
+  padding-top: 10px;
   display: flex;
-  flex-direction: row;
   flex-flow: row wrap;
 }
 
 .quiz-answer-button{
   flex-basis: 50%;
+  padding: 5px;
+  font-size: 1em;
+  font-family: "Helvetica Neue"
 }
 
 .show-correct{
