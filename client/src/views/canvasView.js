@@ -53,16 +53,19 @@ CanvasView.prototype = {
       self.drawImage(self.template)
     }
     templateButtons[1].onclick = function(){
+      self.template = 'design-images/canvas/Erik-the-Red.png'
       self.drawRectangle()
-      self.drawImage('design-images/canvas/Erik-the-Red.png')
+      self.drawImage(self.template)
     }
     templateButtons[2].onclick = function(){
+      self.template = 'design-images/canvas/Marco-Polo.png'
       self.drawRectangle()
-      self.drawImage('design-images/canvas/Marco-Polo.png')
+      self.drawImage(self.template)
     }
     templateButtons[3].onclick = function(){
+      self.template = 'design-images/canvas/Neil-Armstrong.png'
       self.drawRectangle()
-      self.drawImage('design-images/canvas/Neil-Armstrong.png')
+      self.drawImage(self.template)
     }
 
   },
