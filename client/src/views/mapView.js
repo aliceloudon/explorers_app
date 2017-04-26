@@ -83,7 +83,7 @@ MapView.prototype = {
     })
     this.markers.push(endMarker)
 
-    var contentString = "<h3>" + explorer.title + "</h3>" + "<p><strong>" + explorer.name + "</strong></p>" + "<p>" + "<img width='150' src=" + explorer.image + ">" + "<h4 id='infowindowLink'><a href='#information'>Discover more</a></h4>"
+    var contentString = "<h3>" + explorer.title + "</h3>" + "<p><strong>" + explorer.name + "</strong></p>" + "<p>" + "<a href='#information'><img width='150' src=" + explorer.image + ">" + "<h4 id='infowindowLink'>Discover more</h4></a>"
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString, maxWidth: 400
