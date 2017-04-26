@@ -91,6 +91,7 @@ TileGame.prototype = {
             
 
             tileGameWindow.style.display = "block"
+            document.getElementById('audio1').play();
 
             closeGameButton.addEventListener('click', function(){
               tileGameWindow.style.display = "none"
