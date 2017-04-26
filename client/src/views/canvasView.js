@@ -6,14 +6,14 @@ var CanvasView = function(canvas, context){
 CanvasView.prototype = {
 
   render: function(){
-    
+
     var self = this
     var circleSize = 25
 
     this.canvas.addEventListener('mousedown', function(e){
-
       self.canvas.onmousemove = function(event){
         var coords = self.canvas.getBoundingClientRect()
+        console.log(coords)
         self.drawCircle( (event.clientX - coords.left), (event.clientY - coords.top), circleSize )
       }
     })
@@ -39,6 +39,12 @@ CanvasView.prototype = {
       self.context.clearRect()
     } // It works but it goes to the top of the page
 
+    var tasmanButton = document.querySelector('#tasman')
+    console.log(tasmanButton)
+    tasmanButton.onclick = function(){
+      console.log('tasman clicked')
+    }
+
   },
 
   drawCircle: function(x, y, circleSize){
@@ -46,7 +52,7 @@ CanvasView.prototype = {
     this.context.arc(x, y, circleSize, 0, Math.PI*2)
     this.context.fill()
     this.context.stroke()
-  }
+  },
 
 }
 

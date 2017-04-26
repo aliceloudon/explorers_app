@@ -273,24 +273,25 @@ li {
   display: flex;
   flex-direction: row;
   height: 600px;
-  width: 100%;
+  /*width: 100%;*/
   background-image: url('design-images/jungle-image.jpg');
+  /*background-size: 600px;*/
   margin: 0;
 }
 
 #canvas {
   position: relative;
   margin: 50px 50px 50px 400px;
-  background-image: url('design-images/colour-in.jpg');
+  background-image: url('design-images/canvas-white.jpg');
   background-size: 100%
 }
 
 #canvas-tool-form {
   position: relative;
-  height: 100px;
+  height: 200px;
   width: 250px;
   /*border: solid 1px black;*/
-  margin-top: 450px;
+  margin-top: 350px;
   background-color: orange;
 }
 
