@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#map-timeline-section {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#map {
+  /*border: solid 1px black;*/
+  /*position: relative;*/
+  margin: 0;
+  width: 75%;
+  margin-right: 15px;
+}
+
+#timeline {
+  position: relative;
+  width: 25%;
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #9BC2E3;
+}
+
+#timeline-list{
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+#timeline ul li { /* the line */
+  list-style-type: none; /* remove the bulletpoints */
+  position: relative; /* positioning within the ul */
+  width: 6px; /* width of the line */
+  left: 10%; /* put it on the left side of it's container */
+  padding-top: 30px; /* padding between list items */
+  background: #fff;
+}
+ 
+#timeline ul li::after { /* the circles */
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ED8D4B;
+}
+
+#timeline ul li:hover {
+  color: #333333;
+}
+
+#timeline ul li div { /* the text boxes */
+  position: relative;
+  bottom: 0;
+  padding: 15px;
+  background: #ED8D4B;
+  left:30px;
+  width: 180px;
+}
+
+#timeline ul li div::before { /* the < connecting the box and the circle */
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #ED8D4B transparent transparent;
+}
+
+li {
+  color: white;
+  font-size: 0.9em;
+  font-family: "Helvetica Neue";
+}
