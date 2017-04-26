@@ -1,9 +1,18 @@
-#colour-in {
-  display: flex;
-  flex-direction: row;
+#colour-title{
+  text-align: center;
+  color: white;
+  font-family: "Helvetica Neue";
+}
+
+#colour-in{
+  background-image: url('design-images/backgrounds/jungle-image.jpg');
   height: 600px;
   width: 100%;
-  background-image: url('design-images/backgrounds/jungle-image.jpg');
+}
+
+#canvas-div {
+  display: flex;
+  flex-direction: row;
   margin: 0;
 }
 
