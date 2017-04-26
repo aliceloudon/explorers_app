@@ -51,16 +51,35 @@ var MapView = function(container, coords, zoom){
 
 MapView.prototype = {
 
+ 
+
   addMarkers: function(explorer){
+
+    var startPointIcon = {
+        url: explorer.icon,
+        scaledSize: new google.maps.Size(30, 30), 
+        origin: new google.maps.Point(0,0), 
+        anchor: new google.maps.Point(0, 0) 
+    } 
+
+    var endPointIcon = {
+        url: "https://cdn4.iconfinder.com/data/icons/maps-and-location/128/Map__Location_x_marks_spot-10-256.png",
+        scaledSize: new google.maps.Size(30, 30), 
+        origin: new google.maps.Point(0,0), 
+        anchor: new google.maps.Point(0, 0) 
+    }  
+
     var startMarker = new google.maps.Marker({
       position: explorer.startcoord,
-      map: this.googleMap
+      map: this.googleMap,
+      icon: startPointIcon
     })
     this.markers.push(startMarker)
 
     var endMarker = new google.maps.Marker({
       position: explorer.endcoord,
-      map: this.googleMap
+      map: this.googleMap,
+      icon: endPointIcon
     })
     this.markers.push(endMarker)
 
