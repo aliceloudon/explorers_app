@@ -8,7 +8,7 @@ CanvasView.prototype = {
   render: function(){
     
     var self = this
-    var circleSize = 50
+    var circleSize = 25
 
     this.canvas.addEventListener('mousedown', function(e){
 
@@ -21,12 +21,6 @@ CanvasView.prototype = {
     this.canvas.addEventListener('mouseup', function(e){
       self.canvas.onmousemove = null
     })
-
-    // this.canvas.onmousedown = function(event){
-    //   var coords = self.canvas.getBoundingClientRect()
-    //   // self.drawRectangle( (event.clientX - coords.left), (event.clientY - coords.top) )
-    //   self.drawCircle( (event.clientX - coords.left), (event.clientY - coords.top), circleSize )
-    // }
 
     var colourPicker = document.querySelector('#change-colour-input')
     colourPicker.onchange = function(){
@@ -42,10 +36,7 @@ CanvasView.prototype = {
 
     var erase = document.querySelector('#erase-button')
     erase.onclick = function(){
-      base_image = new Image()
-      base_image.src = 'design-images/colour-in.jpg'
-      self.context.drawImage(base_image)
-      // self.context.clearRect()
+      self.context.clearRect()
     } // It works but it goes to the top of the page
 
   },
