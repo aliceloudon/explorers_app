@@ -92,9 +92,10 @@
   text-decoration: none;
 }
 
-.timeline-text:visited{
-  color: white;
+.timeline-text a:hover{
+  color: #9BC2E3;
   font-family: "Helvetica Neue";
+  text-decoration: none;
 }
 
 li {

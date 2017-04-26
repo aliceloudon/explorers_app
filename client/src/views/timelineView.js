@@ -8,14 +8,10 @@ TimelineView.prototype = {
     explorers.forEach(function(explorer){
       var itemContainer = document.createElement('div')
       var li = document.createElement('li')
-      var date = document.createElement('div')
-      date.innerHTML = '<a href="#explore"><h2>' + explorer.date + '</h2></a>'
-      date.className = 'timeline-text'
-      li.appendChild(date)
-      var title = document.createElement('p')
-      title.innerHTML = '<a href="#explore"><p>' + explorer.title + '</p></a>'
-      title.className = 'timeline-text'
-      date.appendChild(title)
+      var text = document.createElement('div')
+      text.innerHTML = '<a href="#explore"><h2>' + explorer.date + '</h2><p>' + explorer.title + '</p></a>'
+      text.className = 'timeline-text'
+      li.appendChild(text)
       this.timelineList.appendChild(li)
       li.addEventListener('click', function(){
         mapView.clearMarkers()
