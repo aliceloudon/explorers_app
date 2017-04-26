@@ -18,6 +18,13 @@ nav {
   border-right: solid 1px #444;
   height: 35px;
 }
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 
 #launch-image-section {
   width: 100%;
@@ -27,19 +34,13 @@ nav {
   width: 100%;
 }
 
-body, html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
 
 #boy-speak {
   height: 400px;
   width: 400px;
   position:absolute;
   right:0;
-  top:1800px;
+  top:2550px;
 }
 
 #girl-speak {

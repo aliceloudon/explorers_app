@@ -6,7 +6,7 @@ TextInfoView.prototype = {
 
   render: function(explorer){
     this.textInfoView.innerHTML = ''
-    var textBox = document.createElement('info-text')
+    var textBox = document.createElement('div')
     textBox.innerHTML = explorer.info
     this.textInfoView.appendChild(textBox)
   }
