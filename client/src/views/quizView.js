@@ -50,7 +50,7 @@ QuizView.prototype = {
     questionNumber.innerText = "Question " + (this.currentQuestion + 1)
     var score = document.createElement("p")
     score.id = "score"
-    score.innerText = this.quiz.score + "/" + this.numberOfQuestions
+    score.innerText = "Score: " + this.quiz.score + "/" + this.numberOfQuestions
 
     quizStats.appendChild(questionNumber)
     quizStats.appendChild(score)
@@ -94,7 +94,7 @@ QuizView.prototype = {
         })
         //check if the answer's correct and update the score display
         self.quiz.checkAnswer(JSON.parse(this.value), questionToAsk)
-        score.innerText = self.quiz.score + "/" + self.numberOfQuestions
+        score.innerText = "Score: " + self.quiz.score + "/" + self.numberOfQuestions
         self.currentQuestion += 1
         //if there are more questions, ask the next, otherwise display results.  Wait 2 seconds in either case
         if(self.currentQuestion < self.numberOfQuestions){
