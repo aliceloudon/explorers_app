@@ -3,22 +3,28 @@
   flex-direction: row;
   height: 600px;
   width: 100%;
-  background-color: grey;
+  background-image: url('design-images/backgrounds/jungle-image.jpg');
   margin: 0;
 }
 
 #canvas {
   position: relative;
-  border: solid 1px black;
   margin: 50px 50px 50px 400px;
-  background-image: url('design-images/colour-in.jpg');
+  background-image: url('design-images/canvas/canvas-white.jpg');
   background-size: 100%
 }
 
 #canvas-tool-form {
   position: relative;
-  height: 200px;
-  width: 200px;
-  margin-top: 350px;
+  height: 180px;
+  width: 250px;
+  margin-top: 370px;
   background-color: orange;
+}
+
+ol {
+  font-size: 1.2em;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 15px;
 }
