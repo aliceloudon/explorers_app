@@ -38,14 +38,14 @@ body, html {
   height: 400px;
   width: 400px;
   position:absolute;
-  right:0;
-  top:1800px;
+  left:0;
+  top:1900px;
 }
 
 #girl-speak {
   height: 400px;
   width: 400px;
   position:absolute;
-  left:0;
+  right:0;
   top:1170px;
 }
