@@ -117,6 +117,7 @@ QuizView.prototype = {
     this.quizContent.innerHTML = ""
     this.quizContent.appendChild(this.closeButton)
     var results = document.createElement("h3")
+    document.getElementById('audio1').play();
     results.innerText = "You scored " + this.quiz.score + " out of " + this.numberOfQuestions + "!"
     this.quizContent.appendChild(results)
   }
