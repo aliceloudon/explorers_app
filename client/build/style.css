@@ -36,17 +36,17 @@ body, html {
 
 
 #boy-speak {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   position:absolute;
   left:0;
   top:2010px;
 }
 
 #girl-speak {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   position:absolute;
   right:0;
-  top:850px;
+  top:800px;
 }
