@@ -11,7 +11,7 @@
 
 #colour-in{
   background-image: url('design-images/backgrounds/jungle-image.jpg');
-  height: 600px;
+  height: 650px;
   width: 100%;
 }
 
@@ -30,9 +30,9 @@
 
 #canvas-tool-form {
   position: relative;
-  height: 180px;
-  width: 250px;
-  margin-top: 350px;
+  height: 300px;
+  width: 280px;
+  margin-top: 230px;
   background-color: orange;
 }
 
@@ -40,5 +40,11 @@ ol {
   font-size: 1.2em;
   text-decoration: none;
   list-style-type: none;
-  padding: 15px;
+  padding: 20px;
+  line-height: 2em;
+}
+
+.template-button, #erase-button {
+  padding: 5px;
+  font-size: 0.8em;
 }
