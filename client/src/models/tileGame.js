@@ -37,7 +37,6 @@ TileGame.prototype = {
     }
 
     var shuffledPairs = this.shuffleArray(this.selectedImages)
-    console.log(this.selectedImages)
     this.selectedImages = shuffledPairs
   },
 
