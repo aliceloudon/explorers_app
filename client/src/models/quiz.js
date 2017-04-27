@@ -38,10 +38,9 @@ Quiz.prototype = {
     if(!this.answeredQuestions.includes(question)){
       if(answer.correct === true){
         this.score += 1
-        this.answeredQuestions.push(question)
       }
+      this.answeredQuestions.push(question)
     }
-    
   },
 
   reset: function(){

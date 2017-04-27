@@ -1,7 +1,7 @@
 var CanvasView = function(canvas, context){
   this.canvas = canvas
   this.context = context
-  this.template = null
+  this.template = 'design-images/canvas/Abel-Tasman.png'
   this.colour = null
 }
 
@@ -44,7 +44,8 @@ CanvasView.prototype = {
     var erase = document.querySelector('#erase-button')
     erase.onclick = function(){
       self.drawRectangle()
-    } // It works but it goes to the top of the page
+      this.drawRectangle(this.template)
+    }
 
     var templateButtons = document.querySelectorAll('.template-button')
     templateButtons[0].onclick = function(){
@@ -67,6 +68,8 @@ CanvasView.prototype = {
       self.drawRectangle()
       self.drawImage(self.template)
     }
+
+    this.drawImage(this.template)
 
   },
 
