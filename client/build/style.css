@@ -40,7 +40,7 @@ body, html {
   width: 400px;
   position:absolute;
   left:0;
-  top:1900px;
+  top:2010px;
 }
 
 #girl-speak {
@@ -48,5 +48,5 @@ body, html {
   width: 400px;
   position:absolute;
   right:0;
-  top:1170px;
+  top:850px;
 }
