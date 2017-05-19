@@ -24,6 +24,7 @@ var app = function(){
   
   var textInfoView = new TextInfoView(document.querySelector('#info-box'))
 
+// ------------------------TILE GAME-----------------------
   explorersList.makeRequest(function(explorers){  
     var tileGameView = new TileGameView(document.querySelector('#memory-game'), explorers)
     tileGameView.render()
@@ -43,7 +44,6 @@ var app = function(){
 
   quiz.makeRequest(function(questions){
     quizButton.addEventListener('click', function(){
-      console.log(quiz.questions)
       quizView.beginQuiz(quiz)
     })
   })

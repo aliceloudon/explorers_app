@@ -22,10 +22,6 @@ CanvasView.prototype = {
 
     this.canvas.addEventListener('mouseup', function(e){
       self.canvas.onmousemove = null
-      if(self.template){
-        console.log('drawing')
-      }
-      
     })
 
     var colourPicker = document.querySelector('#change-colour-input')
